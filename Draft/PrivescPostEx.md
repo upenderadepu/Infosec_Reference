@@ -1297,6 +1297,12 @@
 		* [Upload and download small files with CertReq.exe - DTM(2020)](https://dtm.uk/certreq/)
 		* [Staying Off the Land: A Threat Actor Methodology - Crowdstrike(2020)](https://www.crowdstrike.com/blog/staying-off-the-land-methodology/)
 		* [Load/Inject malicious DLL using Microsoft Tools - safe(2018)](https://web.archive.org/web/20180203110920/https://safe-cyberdefense.com/load-inject-malicious-dll-using-microsoft-tools/)
+		* [FalconFriday — Masquerading; LOLBin file renaming— 0xFF0C - Olaf Hartong(2021)](https://medium.com/falconforce/falconfriday-masquerading-lolbin-file-renaming-0xff0c-b01e0ab5a95d)
+		* [Abusing and Detecting LOLBIN Usage of .NET Development Mode Features - BOHOPS(2021](https://bohops.com/2021/05/30/abusing-and-detecting-lolbin-usage-of-net-development-mode-features/)
+			* From an attacker’s perspective, configuration adjustments provide interesting opportunities for living-off-the-land-binary (lolbin) execution. In this short post, we’ll highlight a technique for turning pretty much any .NET executable into an opportunistic lolbin that abuses .NET development features by overriding Global Assembly Cache (GAC) path lookups. Furthermore, we’ll examine several defensive considerations for detecting malicious use of the presented technique.
+		* [Living off the land - Slayerlabs(2021)](https://posts.slayerlabs.com/living-off-the-land/)
+		* [BYOT – Bring Your Own Telemetry - Hexacorn(2021)](https://www.hexacorn.com/blog/2021/05/20/byot-bring-your-own-telemetry/)
+		* [Symantec Endpoint Protection Meets COM — Using “Symantec.SSHelper” As A LOLBIN - Nasreddine Bencherchali(2021)](https://nasbench.medium.com/symantec-endpoint-protection-meets-com-using-symantec-sshelper-as-a-lolbin-40d515a121ce)
 	* **Talks/Presentations/Videos**
 		* [Living Off the Land: A Minimalist’s Guide to Windows Post-Exploitation - Christopher Campbell, Matthew Graeber(Derybcon2013)](https://www.irongeek.com/i.php?page=videos/derbycon3/1209-living-off-the-land-a-minimalist-s-guide-to-windows-post-exploitation-christopher-campbell-matthew-graeber)
 			* Two of the biggest challenges of long-term penetration tests are advanced security products and active administrators. Host intrusion prevention, application white-listing and antivirus software are all looking for your tools. Administrators and network defenders are doing everything they can to find you. Surprisingly, the easiest way to hide from them and homestead in a Windows enterprise is to live off the land. Microsoft provides you with all the tools you need to get into a network and live there forever. Tools such as Wmic, Netsh and PowerShell are well-known to administrators, but they also provide an attacker a whole range of virtually untapped features. By simply leveraging PowerSploit and a few tricks you can reliably bypass antivirus, get around whitelisting, escalate privileges, redirect network traffic, take full packet captures, log keystrokes, take screenshots, dump hashes, persist and pivot to other hosts all without introducing a single binary!
@@ -1396,6 +1402,7 @@
 	* **Command and Scripting Interpreter**<a name="wincmdexec"></a>
 		* **Cmd.exe**
 			* **Articles/Blogposts/Writeups**
+				* [Create Your Own CMD.XLS - Didier Stevens(2016](https://blog.didierstevens.com/2016/02/10/create-your-own-cmd-xls/)
 				* [cmd.exe running any file no matter what extension - Hexacorn](http://www.hexacorn.com/blog/2019/04/21/cmd-exe-running-any-file-no-matter-what-extension/)
 				* [Command line do-nothingness - hexacorn(2020)](https://www.hexacorn.com/blog/2020/05/23/command-line-do-nothingness/)
 			* **CMD Arg Spoofing**
@@ -1484,6 +1491,10 @@
 				* [Sideloading DLL like APT1337 - flangvik.com(2019)](https://flangvik.com/privesc/windows/bypass/2019/06/25/Sideload-like-your-an-APT.html)
 				* [Bypassing AV's using DLL Side-Loading - flangvik.com(2019)](https://flangvik.com/2019/07/24/Bypassing-AV-DLL-Side-Loading.html)
 				* [DLL Proxy Loading Your Favourite C# Implant - Flangvik(2020)](https://redteaming.co.uk/2020/07/12/dll-proxy-loading-your-favorite-c-implant/)
+				* [Adding DLL Exports with dnlib - RastaMouse(2020)](https://offensivedefence.co.uk/posts/dnlib-dllexport/)
+			* **Tools**
+				* [dll-exports](https://github.com/magnusstubman/dll-exports)
+					* Collection of DLL function export forwards for DLL export function proxying
 	* **Downloaders**
 		* [Using signed Installshield installers as downloaders - hexacorn(2019)](https://www.hexacorn.com/blog/2019/06/02/using-signed-installshield-installers-as-downloaders/)
 	* **Exploitation for Client Execution**
@@ -1513,40 +1524,49 @@
 	* **Native API**(Syscalls & WinAPI)
 		* **101**
 			* [Windows API - Wikipedia](https://en.wikipedia.org/wiki/Windows_API)
+			* [How Do Windows NT System Calls REALLY Work? - John Gulbrandsen](https://www.codeguru.com/cpp/w-p/system/devicedriverdevelopment/article.php/c8035/How-Do-Windows-NT-System-Calls-REALLY-Work.htm)
+			* [FreshyCalls: Syscalls Freshly Squeezed! - ElephantSe4l(2020)](https://www.crummie5.club/freshycalls/)
+		* **(Un)Official Documentation**
 			* [Windows API index - docs.ms](https://docs.microsoft.com/en-us/windows/win32/apiindex/windows-api-list)
 				* The following is a list of the reference content for the Windows application programming interface (API) for desktop and server applications. Using the Windows API, you can develop applications that run successfully on all versions of Windows while taking advantage of the features and capabilities unique to each version. (Note that this was formerly called the Win32 API. The name Windows API more accurately reflects its roots in 16-bit Windows and its support on 64-bit Windows.)
-			* [System calls: What are system calls and why are they necessary? - ](https://www.ionos.com/digitalguide/server/know-how/what-are-system-calls/)
+			* [System calls: What are system calls and why are they necessary? - ionos.com](https://www.ionos.com/digitalguide/server/know-how/what-are-system-calls/)
 			* [System Calls - docs.ms](https://docs.microsoft.com/en-us/cpp/c-runtime-library/system-calls?view=msvc-160&viewFallbackFrom=vs-2019)
-			* [How Do Windows NT System Calls REALLY Work? - John Gulbrandsen](https://www.codeguru.com/cpp/w-p/system/devicedriverdevelopment/article.php/c8035/How-Do-Windows-NT-System-Calls-REALLY-Work.htm)
-			* [Windows X86-64 System Call Table (XP/2003/Vista/2008/7/2012/8/10) - Mateusz "j00ru" Jurczyk](https://j00ru.vexillium.org/syscalls/nt/64/)
-			* [FreshyCalls: Syscalls Freshly Squeezed! - ElephantSe4l(2020)](https://www.crummie5.club/freshycalls/)
-			* [Syscalls with D/Invoke - RastaMouse2021](https://offensivedefence.co.uk/posts/dinvoke-syscalls/)
-			* [Bypassing User-Mode Hooks and Direct Invocation of System Calls for Red Teams - @modexpblog(2020)](https://www.mdsec.co.uk/2020/12/bypassing-user-mode-hooks-and-direct-invocation-of-system-calls-for-red-teams/)
-		* **Learning**
-			* [Introduction to Windows API - ZetCode(2020)](https://zetcode.com/gui/winapi/introduction/)
-		* **Articles/Blogposts/Writeups**
-			* [Struggling between syscall or sysenter (Windows) - StackOverflow](https://reverseengineering.stackexchange.com/questions/16454/struggling-between-syscall-or-sysenter-windows/16511#16511)
-			* [Intercepting System Calls on x86_64 Windows - Jurriaan Bremer(2012)](http://jbremer.org/intercepting-system-calls-on-x86_64-windows/)
-			* [On Windows Syscall Mechanism and Syscall Numbers Extraction Methods  - Simone Margaritelli(2014)](https://www.evilsocket.net/2014/02/11/on-windows-syscall-mechanism-and-syscall-numbers-extraction-methods/)
-			* [Accessing the Windows API Directly - Osanda Malith(2015](https://osandamalith.com/2015/02/19/accessing-the-windows-api-directly/)
 			* [WinAPI Documentation - Steve Donovan](https://stevedonovan.github.io/winapi/api.html)
+		* **Learning**
+			* [Struggling between syscall or sysenter (Windows) - StackOverflow](https://reverseengineering.stackexchange.com/questions/16454/struggling-between-syscall-or-sysenter-windows/16511#16511)
+			* [System calls on Windows x64 - n4r1b(2019)](https://www.n4r1b.com/posts/2019/03/system-calls-on-windows-x64/)
+			* [Introduction to Windows API - ZetCode(2020)](https://zetcode.com/gui/winapi/introduction/)
+			* [Tutorial Understanding Windows SysCalls - SysCall Dumper - Timb3r](https://guidedhacking.com/threads/understanding-windows-syscalls-syscall-dumper.14470/)
+			* [Undocumented Windows API Functions & Structures - Rake(2020)](https://guidedhacking.com/threads/undocumented-windows-functions-structures.14438/)
+		* **Syscall Numbers**
+			* [Windows X86-64 System Call Table (XP/2003/Vista/2008/7/2012/8/10) - Mateusz "j00ru" Jurczyk](https://j00ru.vexillium.org/syscalls/nt/64/)
+			* [On Windows Syscall Mechanism and Syscall Numbers Extraction Methods  - Simone Margaritelli(2014)](https://www.evilsocket.net/2014/02/11/on-windows-syscall-mechanism-and-syscall-numbers-extraction-methods/)
+		* **Using Them**
+			* [SharedUserData SystemCall Hook - bugcheck, skape(2005)](http://uninformed.org/index.cgi?v=3&a=4&p=22)
 			* [Making Raw Syscalls on Windows From Python - Spencer(2017)](https://warroom.rsmus.com/making-syscalls-python/)
-			* [Win32k System Call Filtering Deep Dive - Morten Schenk(2017)](https://improsec.com/tech-blog/win32k-system-call-filtering-deep-dive)
-			* [The Windows 10 TH2 INT 2E mystery - Adrien Chevalier(2018)](https://blog.amossys.fr/windows10_TH2_int2E_mystery.html)
-			* [Malware Mitigation when Direct System Calls are Used - Hod Gavriel(2018)](https://www.cyberbit.com/blog/endpoint-security/malware-mitigation-when-direct-system-calls-are-used/)		
-			* [SharedUserData SystemCall Hook - uninformed Vol.3](http://uninformed.org/index.cgi?v=3&a=4&p=22)
-			* [Malware Mitigation when Direct System Calls are Used - Hod Gavriel(2018)](https://www.cyberbit.com/blog/endpoint-security/malware-mitigation-when-direct-system-calls-are-used/)
-			* [Red Team Tactics: Combining Direct System Calls and sRDI to bypass AV/EDR - Cornelis de Plaa(2019)](https://outflank.nl/blog/2019/06/19/red-team-tactics-combining-direct-system-calls-and-srdi-to-bypass-av-edr/)
-				* In this blog post we will explore the use of direct system calls, restore hooked API calls and ultimately combine this with a shellcode injection technique called sRDI. We will combine these techniques in proof of concept code which can be used to create a LSASS memory dump using Cobalt Strike, while not touching disk and evading AV/EDR monitored user-mode API calls.
 			* [Calling Syscalls Directly from Visual Studio to Bypass AVs/EDRs - @spottheplanet](https://www.ired.team/offensive-security/defense-evasion/using-syscalls-directly-from-visual-studio-to-bypass-avs-edrs)
 			* [Retrieving ntdll Syscall Stubs from Disk at Run-time - @spottheplanet](https://www.ired.team/offensive-security/defense-evasion/retrieving-ntdll-syscall-stubs-at-run-time)
-			* [System calls on Windows x64 - n4r1b(2019)](https://www.n4r1b.com/posts/2019/03/system-calls-on-windows-x64/)
+			* [Red Team Tactics: Combining Direct System Calls and sRDI to bypass AV/EDR - Cornelis de Plaa(2019)](https://outflank.nl/blog/2019/06/19/red-team-tactics-combining-direct-system-calls-and-srdi-to-bypass-av-edr/)
+				* In this blog post we will explore the use of direct system calls, restore hooked API calls and ultimately combine this with a shellcode injection technique called sRDI. We will combine these techniques in proof of concept code which can be used to create a LSASS memory dump using Cobalt Strike, while not touching disk and evading AV/EDR monitored user-mode API calls.
+			* [Bypassing User-Mode Hooks and Direct Invocation of System Calls for Red Teams - @modexpblog(2020)](https://www.mdsec.co.uk/2020/12/bypassing-user-mode-hooks-and-direct-invocation-of-system-calls-for-red-teams/)
+			* [Implementing Direct Syscalls Using Hell’s Gate - N4kedTurtle(2020)](https://teamhydra.blog/2020/09/18/implementing-direct-syscalls-using-hells-gate/)
+			* [Syscalls with D/Invoke - RastaMouse2021](https://offensivedefence.co.uk/posts/dinvoke-syscalls/)
+			* [Hiding your syscalls - passthehashbrowns(2021](https://passthehashbrowns.github.io/hiding-your-syscalls)
+				* [Code](https://github.com/passthehashbrowns/hiding-your-syscalls)
+		* **Syscall Filtering**
+			* [Rainbow Over the Windows: More Colors Than You Could Expect - @zer0mem, @long123king(2016)](https://www.slideshare.net/PeterHlavaty/rainbow-over-the-windows-more-colors-than-you-could-expect)
+			* [Win32k System Call Filtering Deep Dive - Morten Schenk(2017)](https://improsec.com/tech-blog/win32k-system-call-filtering-deep-dive)
+		* **Articles/Blogposts/Writeups**
+			* [Accessing the Windows API Directly - Osanda Malith(2015](https://osandamalith.com/2015/02/19/accessing-the-windows-api-directly/)
+			* [I Like Syscalls (And I Cannot Lie) - Steiner(2015)](https://warroom.rsmus.com/i-like-syscalls-and-i-cannot-lie/)
 			* [Using Syscalls to Inject Shellcode on Windows - Solomon Sklash(2020)](https://www.solomonsklash.io/syscalls-for-shellcode-injection.html)
-			* [Undocumented Windows API Functions & Structures - Rake](https://guidedhacking.com/threads/undocumented-windows-functions-structures.14438/)
 			* [Red Team Tactics: Utilizing Syscalls in C# - Prerequisite Knowledge - Jack Halon](https://jhalon.github.io/utilizing-syscalls-in-csharp-1/)
 			* [Red Team Tactics: Utilizing Syscalls in C# - Writing The Code - Jack Halon](https://jhalon.github.io/utilizing-syscalls-in-csharp-2/)
-			* [Tutorial Understanding Windows SysCalls - SysCall Dumper - Timb3r](https://guidedhacking.com/threads/understanding-windows-syscalls-syscall-dumper.14470/)
+			* [The Windows 10 TH2 INT 2E mystery - Adrien Chevalier(2018)](https://blog.amossys.fr/windows10_TH2_int2E_mystery.html)
+			* [Malware Mitigation when Direct System Calls are Used - Hod Gavriel(2018)](https://www.cyberbit.com/blog/endpoint-security/malware-mitigation-when-direct-system-calls-are-used/)
+			* [SharedUserData SystemCall Hook - uninformed Vol.3](http://uninformed.org/index.cgi?v=3&a=4&p=22)
 			* [Fuzzing the Windows API for AV Evasion - Winternl(2020)](https://winternl.com/fuzzing-the-windows-api-for-av-evasion/)
+			* [Detecting Manual Syscalls from User Mode - jackullrich(2021](https://winternl.com/detecting-manual-syscalls-from-user-mode/)
 		* **Talks/Presentations/Videos**
 			* [Getting Windows to Play with Itself: A Pen Testers Guide to Windows API Abuse - Brady Bloxham(Derbycon2014)](https://www.irongeek.com/i.php?page=videos/derbycon4/t122-getting-windows-to-play-with-itself-a-pen-testers-guide-to-windows-api-abuse-brady-bloxham)
 				* Windows APIs are often a blackbox with poor documentation, taking input and spewing output with little visibility on what actually happens in the background. By reverse engineering (and abusing) some of these seemingly benign APIs, we can effectively manipulate Windows into performing stealthy custom attacks using previously unknown persistent and injection techniques. In this talk, we’ll get Windows to play with itself nonstop while revealing 0day persistence, previously unknown DLL injection techniques, and Windows API tips and tricks. To top it all off, a custom HTTP beaconing backdoor will be released leveraging the newly released persistence and injection techniques. So much Windows abuse, so little time.
@@ -1571,6 +1591,14 @@
 				* Some research on AltSystemCallHandlers functionality in Windows 10 20H1 18999
 			* [FreshyCalls PoC](https://github.com/Crummie5/Freshycalls_PoC/)
 				* A simple dumper as FreshyCalls' PoC. That's what's trendy, isn't it? `¯\_(ツ)_/¯`		
+			* [inline_syscall](https://github.com/JustasMasiulis/inline_syscall)
+				* Header only library that allows you to generate direct syscall instructions in an optimized, inlineable and easy to use manner.
+			* [Syscall Monitor]()https://github.com/hzqst/Syscall-Monitor)
+				* This is a process monitoring tool (like Sysinternal's Process Monitor) implemented with Intel VT-X/EPT for Windows 7+.
+	* **Power API**
+		* [Deus Somnum](https://github.com/am0nsec/vx/tree/master/Virus.Win64.DeusSomnum)
+			* Leverage the Windows Power Management API for code execution and defense evasion.
+			* [Paper](https://vxug.fakedoma.in/papers/VXUG/Exclusive/AbusingtheWindowsPowerManagementAPI.pdf)
 	* **Processes**
 		* [Creating a Child Process with Redirected Input and Output - docs.ms](https://docs.microsoft.com/en-us/windows/win32/procthread/creating-a-child-process-with-redirected-input-and-output)
 	* **Scheduled Task/Job**
@@ -1728,6 +1756,10 @@
 * **Persistence**<a name="winpersist"></a>
 	* **101**
 		* [Windows Userland Persistence Fundamentals - b33f](http://www.fuzzysecurity.com/tutorials/19.html)	
+		* [Persistence - pentestlab.blog](https://pentestlab.blog/methodologies/red-teaming/persistence/)
+		* [alphaseclab Persistence](https://github.com/alphaSeclab/persistence/blob/master/Readme_en.md)
+		* [Windows Persistence - Chad Duffey(2020)](https://www.chadduffey.com/2020/06/Windows-Persistence.html)
+		* [Wicked malware persistence methods - Hasherezade(2017)](https://speakerdeck.com/hshrzd/wicked-malware-persistence-methods)
 	* **Tactics**
 		* [Hiding Registry keys with PSReflect - Brian Reitz](https://posts.specterops.io/hiding-registry-keys-with-psreflect-b18ec5ac8353)
 		* [Hiding Files by Exploiting Spaces in Windows Paths](http://blakhal0.blogspot.com/2012/08/hiding-files-by-exploiting-spaces-in.html)
@@ -1737,7 +1769,13 @@
 			* [Materials](https://github.com/huntresslabs/evading-autoruns)
 		* [Here to stay: Gaining persistency by Abusing Advanced Authentication Mechanisms - Marina Simakov, Igal Gofman](https://www.youtube.com/watch?v=JvormRcth9w)
 			* [Slides](https://paper.seebug.org/papers/Security%20Conf/Defcon/2017/DEFCON-25-Marina-Simakov-and-Igal-Gofman-Here-to-stay-Gaining-persistence-by-abusing-auth-mechanisms.pdf)
+		* [Killsuit the equation group's swiss army knife for persistence - Francisco J Donoso(BlueHat v18)](https://www.youtube.com/watch?v=R5mgAsd2VBM)
+			* This talk expands on my research into the Equation Group's post exploitation tools. My previous research focused on providing a general overview of DanderSpritz, a full-featured post-exploitation toolkit included in the ShadowBroker's "Lost in Translation" leak. This talk provides a deep dive into KillSuit which is the Equation Group's Swiss Army Knife for persistence, information gathering, defense evasion, and data exfiltration in unique and interesting ways.   During the talk, we will dissect the capabilities and functionality of the KillSuit framework, a little-known (and somewhat overlooked) component of the much larger DanderSpritz post-exploitation toolkit, leaked by the Shadow Brokers in April 2017. KillSuit is a full featured and versatile framework used by a variety of the Equation Group's tools and implants. KillSuit provides the ability to quietly establish persistence on machines via bootkits and other persistence methods and then allows operators to install persistent modules such as keyloggers, packet capture tools, tools that perform WiFi MITM, and other more information gathering tools. KillSuit also includes support for many plugins that provide interesting ways to silently exfiltrate data - some specifically designed to make data exfiltration across air gapped networks possible - including custom written IPSEC-like protocols and misuse of "disabled" WIFI cards and nearby open networks.
 	* **Tools**
+	* **3rd Party Applications**
+		* [Zoom Persistence via Symlink Abuse](https://github.com/S4R1N/ZoomPersistence)
+		* [Persistence with KeePass - Part 1 - two06(2019](https://blog.two06.info/Persistence-with-KeePass-Part-1/)
+			* [Part 2](https://blog.two06.info/Persistence-with-KeePass-Part-2/)
 	* **Account Manipulation**
 		* **Additional Azure Service Principal Credentials**
 		* **Exchange Email Delegate Permissions**
@@ -1754,6 +1792,8 @@
 				* [RID Hijacking: Maintaining Access on Windows Machines](https://github.com/r4wd3r/RID-Hijacking)
 					* The RID Hijacking hook, applicable to all Windows versions, allows setting desired privileges to an existent account in a stealthy manner by modifying some security attributes of an user. By only using OS resources, it is possible to replace the RID of an user right before the primary access token is created, allowing to spoof the privileges of the hijacked RID owner.
 		* **SSH Authorized Keys**
+	* **Accessibility Features**
+		* [Windows Persistence: Accessibility Features - Pavandeep Singh(2020](https://www.hackingarticles.in/windows-persistence-accessibility-features/)
 	* **Active Directory Specific**
 		* **Articles/Blogposts/Writeups**
 			* [Sneaky Active Directory Persistence Tricks - adsecurity.org](https://adsecurity.org/?p=1929)
@@ -1805,6 +1845,8 @@
 				* Powershell script to search for alternate data streams This script searches recursively through a specified file system for alternate data streams (ADS). The script can search local and UNC paths speciffied by the $path paramenter. All readable files will have the stream attrubute inspected ignoring the default DATA and FAVICON (image file on URL files) streams. The script use Boe Prox's amazing Get-RunspaceData function and other code to multithread the search. The default number of threads is the number of logical cores plus one. This can be adjusted by specifiying the $threads parameter. Use with caution as runspaces can easily chomp resources (CPU and RAM). Once the number of file system objects (files and folders) is determined, they are split into equal groups of objects divided by the number of threads. Then each thread has a subset of the total objects to inspect for ADS.
 	* **AMSI Provider**
 		* [Antimalware Scan Interface Provider for Persistence - B4rtik(2020)](https://b4rtik.github.io/posts/antimalware-scan-interface-provider-for-persistence/)
+		* [AMSI-Provider](https://github.com/netbiosX/AMSI-Provider)
+			* A fake AMSI Provider which can be used to gain persistence on a host when a specific text is triggered. By default calc.exe will open.
 	* **APPX/UWP**
 		* [Persistence using Universal Windows Platform apps (APPX) - oddvarmoe](https://oddvar.moe/2018/09/06/persistence-using-universal-windows-platform-apps-appx/)
 			* Persistence can be achieved with Appx/UWP apps using the debugger options. This technique will not be visible by Autoruns.
@@ -1820,6 +1862,8 @@
 	* **Boot or Logon Autostart Execution**
 		* [Windows Startup Application Database](http://www.pacs-portal.co.uk/startup_content.php)
 		* [Windows Program Automatic Startup Locations(2004) BleepingComputer](https://www.bleepingcomputer.com/tutorials/windows-program-automatic-startup-locations/)
+		* [Hijacking the Boot Process - Ransomware Style - Raul Alvarez(ShowMeCon2018)](https://www.irongeek.com/i.php?page=videos/showmecon2018/showmecon-2018-track-2-03-hijacking-the-boot-process-ransomware-style-raul-alvarez)
+			* Have you ever wondered how a boot process works? How a computer detects which operating system it needs to load? Or what is the impact if that single sector in your harddisk is compromised? In this presentation, we are going to look into how Petya, a ransomware, can overwrite an MBR (Master Boot Record), both in MBR- and GPT-style disk, with its malicious code. Then, we are going to follow the code in the MBR and show how a simple malicious kernel code can take control of the boot process until you pay the ransom. I will show a demo on how to debug the MBR to see how the actual native code executes without any API. We are also going to see how we can use a combination of different tools to figure out how a ransomware can infect the very first sector of a harddisk. Tools, such as, Disk Management, DISKPART, WinObj, Process Monitor, and HDHacker. And of course, x64dbg and ollydbg for debugging the ransomware in application-level. And finally, we are going to see how to use Bochs debugger to analyze the malware while it runs its own kernel code.
 		* **Authentication Package**
 		* **Kernel Modules and Extensions**
 		* **LSASS Driver**
@@ -1849,6 +1893,8 @@
 			* [Backdooring Plugins - Averagejoe](https://www.gironsec.com/blog/2018/03/backdooring-plugins/)
 	* **Create Account**
 		* **Local Account**
+			* [Backdoorplz](https://github.com/jfmaes/Backdoorplz)
+				* adding a backdooruser using win32api
 		* **Domain Account**
 		* **Cloud Account**
 	* **Create or Modify System Process**
@@ -1856,6 +1902,11 @@
 		* **Systemd Service**
 		* **Windows Service**
 		* **Launch Daemon**	
+	* **DLL Injection/Hijacking**
+		* **Articles/Blogposts/Writeups**
+		* **Tools**
+			* [bait](https://github.com/imag0r/bait)
+				* Bait for dll injection and executable planting
 	* **Drivers**
 		* [Windows Firewall Hook Enumeration](https://www.nccgroup.com/en/blog/2015/01/windows-firewall-hook-enumeration/)
 			* We’re going to look in detail at Microsoft Windows Firewall Hook drivers from Windows 2000, XP and 2003. This functionality was leveraged by the Derusbi family of malicious code to implement port-knocking like functionality. We’re going to discuss the problem we faced, the required reverse engineering to understand how these hooks could be identified and finally how the enumeration tool was developed.
@@ -1883,19 +1934,16 @@
 			* **Tools**
 				* [Windows 0wn3d By Default - Mark Baggett(Derbycon2013)](https://www.irongeek.com/i.php?page=videos/derbycon3/4206-windows-0wn3d-by-default-mark-baggett)
 					* Description: “In this talk we will discuss API Hooking, Process Execution Redirection, Hiding Registry keys and hiding directories on the hard drive. We must be talking about rootkits, right? Well yes, but not in the way you think. The Windows family of operating systems has all of these capabilities built right in! Using nothing but tools and techniques distributed and documented by Microsoft we can implement all of these rootkit functions. During this exciting talk I will present new attacks against Windows operating system that provide rootkit like functionality with built-in OS tools. In session, we’ll demonstrate how to leverage the Microsoft Application Compatibility Toolkit to help hide an attacker’s presence on your system. The Application Compatibility Toolkit allows you to create application shims that intercept and redirect calls from applications to the operating system. This native rootkit like capability is intended to make the Windows operating system compatible with very old or poorly written applications. Do DEP, ASLR, UAC, and Windows Resource Protection, File system ACLS and other modern OS security measures get it your way? No problem. Turn them off! Do you want to hide files and registry keys and from the user? The Application Compatibility toolkit allows you to create a virtual world for any application and hide resources from view. If someone inspects the registry with regedit they will see exactly what the attacker wants them to see and not what the OS sees when it launches programs. Did they patch your target so your exploit doesn’t work? Guess what, making applications backwards compatible is what this tool is intended to do. Make your favorite applications “old exploit compatible” insuring you can re-exploit the target with this awesome untapped resource. Everything you need to subvert windows applications is built right into the windows kernel. Come learn how to use the application compatibility toolkit to tap this great resource.”
-		* **Change Default File Association**
-			* [Registering an Application to a URI Scheme - docs.ms](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa767914(v=vs.85)?redirectedfrom=MSDN)
-			* [Exploiting custom protocol handlers in Windows - Andrey Polkovnychenko](https://www.vdoo.com/blog/exploiting-custom-protocol-handlers-in-windows)
-				* In this article we would like to present the mechanism for custom protocol handling in Windows, and how it can be exploited using a simple command injection vulnerability.
 		* **Component Object Model Hijacking**
 			* [COM Object hijacking: the discreet way of persistence](https://blog.gdatasoftware.com/blog/article/com-object-hijacking-the-discreet-way-of-persistence.html)
-			* [Userland Persistence with Scheduled Tasks and COM Handler Hijacking](https://enigma0x3.net/2016/05/25)
+			* [Userland Persistence with Scheduled Tasks and COM Handler Hijacking - enigma0x3(2016)](https://enigma0x3.net/2016/05/25)
 			* [How To Hunt: Detecting Persistence & Evasion With The COM - Blake Strom](https://www.endgame.com/blog/technical-blog/how-hunt-detecting-persistence-evasion-com)
 			* [Persistence: “the continued or prolonged existence of something”: Part 2 – COM Hijacking - MDSec](https://www.mdsec.co.uk/2019/05/persistence-the-continued-or-prolonged-existence-of-something-part-2-com-hijacking/)
 			* [Use COM Object hijacking to maintain persistence——Hijack CAccPropServicesClass and MMDeviceEnumerator - 3gstudent](https://3gstudent.github.io/3gstudent.github.io/Use-COM-Object-hijacking-to-maintain-persistence-Hijack-CAccPropServicesClass-and-MMDeviceEnumerator/)
 			* [Use COM Object hijacking to maintain persistence——Hijack explorer.exe - 3gstudent](https://3gstudent.github.io/3gstudent.github.io/Use-COM-Object-hijacking-to-maintain-persistence-Hijack-explorer.exe/)
 			* [Activation Contexts — A Love Story - Philip Tsukerman(2019)](https://medium.com/philip-tsukerman/activation-contexts-a-love-story-5f57f82bccd)
 				* TL;DR — Windows loads a version of the Microsoft.Windows.SystemCompatible assembly manifest into every process. Tampering with it lets you inject DLL side-loading opportunities into every process, and to perform COM hijacking without touching the registry. Unfortunately, the manifest could be replaced by another version, possibly killing your persistence by surprise.
+			* [Persistence – COM Hijacking - NetbiosX](https://pentestlab.blog/2020/05/20/persistence-com-hijacking/)
 		* **Emond**
 		* **Event Log**
 			* [Windows Event Log Driven Back Doors](http://blakhal0.blogspot.com/2015/03/windows-event-log-driven-back-doors.html)
@@ -1916,6 +1964,8 @@
 		* **Screensaver**
 		* **Trap**
 		* **Windows Management Instrumentation Event Subscription**
+	* **Extension Handlers**
+		* [Hijacking extensions handlers as a malware persistence method - hasherezade(2017)](https://hshrzd.wordpress.com/2017/05/25/hijacking-extensions-handlers-as-a-malware-persistence-method/)
 	* **External Remote Services**
 	* **Filesystem**
 		* **NTFS**
@@ -1933,6 +1983,9 @@
 		* **Path Interception by Unquoted Path**
 		* **Services File Permissions Weakness**
 		* **Services Registry Permissions Weakness**
+	* **IIS Modules**
+		* [IIS Raid – Backdooring IIS Using Native Modules - Rio Sherri(2020)](https://www.mdsec.co.uk/2020/02/iis-raid-backdooring-iis-using-native-modules/)
+			* Back in 2018, PaloAlto Unit42 publicly documented RGDoor, an IIS backdoor used by the APT34. The article highlighted some details which sparked my interest and inspired me to write IIS-Raid, an IIS backdoor module that allows red-team operators to keep a stealthy persistence on IIS web-servers. In this blogpost, we will discuss some of the key components of this tool, how it was built and demonstrate its features.
 	* **Implant Container Image**
 	* **MS Distributed Transaction Coordinator Service**
 		* **Articles/Blogposts/Writeups**
@@ -1940,6 +1993,12 @@
 			* [The Microsoft Distributed Transaction Coordinator service must run under the NT AUTHORITY\NetworkService Windows account - support.ms](https://support.microsoft.com/en-us/help/903944/the-microsoft-distributed-transaction-coordinator-service-must-run-und)
 			* [Shadow Force Uses DLL Hijacking, Targets South Korean Company - Dove Chiu(2015)](https://blog.trendmicro.com/trendlabs-security-intelligence/shadow-force-uses-dll-hijacking-targets-south-korean-company/)
 			* [Use msdtc to maintain persistence - 3gstudent](https://3gstudent.github.io/3gstudent.github.io/Use-msdtc-to-maintain-persistence/)
+	* **.NET**
+		* [Common Language Runtime Hook for Persistence - Paul Laine(2019](https://www.contextis.com/us/blog/common-language-runtime-hook-for-persistence)
+			* This blog post explains how it is possible to execute arbitrary code and maintain access to a Microsoft Windows system by leveraging the Common Language Runtime application domain manager.
+		* [Configuring our Machine for Persistence - NotoriousRebel(2020)](https://web.archive.org/web/20200227092613if_/https://secbytes.net/Configuring-our-Machine-for-Persistence)
+		* [ConfigPersist](https://github.com/NotoriousRebel/ConfigPersist)
+			* Utilizes modifying machine.config for persistence through CLR hooking, after installing signed .NET assembly onto Global Assembly Cache.
 	* **LAPS**
 		* **Articles/Blogposts/Writeups**
 			* [Mise en place d'une Backdoor LAPS via modification de l'attribut SearchFlags avec DCShadow - Gregory Lucand](https://adds-security.blogspot.com/2018/08/mise-en-place-dune-backdoor-laps-via.html)
@@ -1966,13 +2025,15 @@
 				* Windows persistence toolkit written in C#
 		* **AppDomain**
 			* [Use AppDomainManager to maintain persistence](https://3gstudent.github.io/3gstudent.github.io/Use-AppDomainManager-to-maintain-persistence/)
-	* **Netsh Helper DLL**
+	* **Netsh**
+		* [Windows Persistence using Netsh - Pavandeep Singh(2020)](https://www.hackingarticles.in/windows-persistence-using-netsh/)
 		* [Persistence – Netsh Helper DLL - NetbiosX](https://pentestlab.blog/2019/10/29/persistence-netsh-helper-dll/)
 	* **Office Applications**
 		* **Articles/Blogposts/Writeups**
 			* [Use Office to maintain persistence - 3gstudent](https://3gstudent.github.io/3gstudent.github.io/Use-Office-to-maintain-persistence/)
 			* [Office Persistence on x64 operating system - 3gstudent](https://3gstudent.github.io/3gstudent.github.io/Office-Persistence-on-x64-operating-system/)
 			* [Persistence: “the continued or prolonged existence of something” - Dominic Chell](https://medium.com/@dmchell/persistence-the-continued-or-prolonged-existence-of-something-e29ea63e5c9a)
+			* [app-password-persistence](https://github.com/rgeoghan/app-password-persistence/blob/master/README.md)
 		* **Add-ins**
 			* [Add-In Opportunities for Office Persistence - William Knowles](https://labs.mwrinfosecurity.com/blog/add-in-opportunities-for-office-persistence/)
 		* **Extensibility Features**
@@ -1982,6 +2043,8 @@
 				* Introduction of wePWNize
 		* **Outlook Forms**
 		* **Outlook Rules**
+			* [XRulez](https://github.com/FSecureLABS/XRulez)
+				* "XRulez" is a Windows executable that can add malicious rules to Outlook from the command line of a compromised host.
 		* **Outlook Home Page**
 		* **Office Test**
 	* **Password Filter DLL**
@@ -2012,10 +2075,19 @@
 				* OpenPasswordFilter is an open source custom password filter DLL and userspace service to better protect / control Active Directory domain passwords.
 			* [PasswordStealing](https://github.com/gtworek/PSBits/tree/master/PasswordStealing)
 				* Password stealing DLL I have written about 1999, some time before Active Directory was announced. And of course it still works. First, it was written in 32-bit Delphi (pardon my language) and when it stopped working as everything changed into 64-bit - in (so much simpler when it comes to Win32 API) C, as I did not have 64-bit Delphi. The original implementation was a bit more complex, including broadcasting the changed password over the network etc. but now it works as a demonstration of an idea, so let's keep it as simple as possible. It works everywhere - on local machines for local accounts and on DCs for domain accounts.
+	* **Port Monitors**
+		* [Windows Persistence: Port Monitors - Aarti Singh(2020)](https://www.hackingarticles.in/windows-persistence-port-monitors/)
+		* [Windows Persistence via Port Monitors - Slayerlabs(2020](https://posts.slayerlabs.com/monitor-persistence/)
 	* **Pre-OS Boot**
 		* **System Firmware**
 		* **Component Firmware**
 		* **Bootkit**
+	* **Print Processor**
+		* [No “Game over” for the Winnti Group - Mathieu Tartare, Martin Smolár(2020)](https://www.welivesecurity.com/2020/05/21/no-game-over-winnti-group/)
+		* [New PipeMon malware uses Windows print processors for persistence - Ionut Ilascu(2020)](https://www.bleepingcomputer.com/news/security/new-pipemon-malware-uses-windows-print-processors-for-persistence/)
+	* **Processes**
+		* [Mayhem](https://github.com/zeroSteiner/mayhem)
+			* The Mayhem packages aims to provide a Python interface for the programmatic manipulation of executable files at runtime on both the Linux and Windows platforms.
 	* **Registry**
 		* [Windows Registry Attacks: Knowledge Is the Best Defense](https://www.redcanary.com/blog/windows-registry-attacks-threat-detection/)
 		* [Windows Registry Persistence, Part 1: Introduction, Attack Phases and Windows Services](http://blog.cylance.com/windows-registry-persistence-part-1-introduction-attack-phases-and-windows-services)
@@ -2034,15 +2106,16 @@
 			* [schtasks](https://technet.microsoft.com/en-us/library/cc725744.aspx)
 			* [Script Task](https://docs.microsoft.com/en-us/sql/integration-services/control-flow/script-task)
 				* Persistence Via MSSQL
-		
-		* **At (Linux)**
-		* **Launchd**
-		* **Cron**
+			* [Persistence using Task Scheduler without a Scheduled Task - marpie(2019](https://www.a12d404.net/windows/2019/10/30/schedsvc-persist-without-task.html)
+		* **Scheduled Job**
+			* [How to create PowerShell Scheduled Jobs on the Local Computer and on Remote Hosts - Patrick Gruenauer(2018](https://sid-500.com/2018/08/25/how-to-create-powershell-scheduled-jobs-on-the-local-computer-and-on-remote-hosts/)
 	* **ScreenSaver**
 		* [Persistence – Screensaver - NetbiosX](https://pentestlab.blog/2019/10/09/persistence-screensaver/)	
 	* **Services**
+			* [Create A Windows Service In C# - Faisal Pathan(2020](https://www.c-sharpcorner.com/article/create-windows-services-in-c-sharp/)
 			* [Stealthier persistence using new services purposely vulnerable to path interception - Christophe Tafani-Dereeper](https://blog.christophetd.fr/stealthier-persistence-using-new-services-purposely-vulnerable-to-path-interception/)
 			* [Persistence – New Service - NetbiosX](https://pentestlab.blog/2019/10/07/persistence-new-service/)
+			* [Persisting in svchost.exe with a Service DLL - @spotheplanet](https://www.ired.team/offensive-security/persistence/persisting-in-svchost.exe-with-a-service-dll-servicemain)
 	* **Server Software Component**
 		* **IIS**
 			* [IIS Raid – Backdooring IIS Using Native Modules - MDSec](https://www.mdsec.co.uk/2020/02/iis-raid-backdooring-iis-using-native-modules/)
@@ -2052,6 +2125,12 @@
 		* **SQL Stored Procedures**
 		* **Transport Agent**
 		* **Web Shell**
+	* **SMB**
+		* [smbdoor](https://github.com/zerosum0x0/smbdoor)
+			* The proof-of-concept smbdoor.sys driver is a silent remote backdoor that does not bind new sockets or perform function modification hooking. Instead it abuses undocumented APIs in srvnet.sys to register itself as a valid SMB handler. It then listens on the already-bound ports 139/445 for special packets in which to execute secondary shellcode. In several ways, it has similarities with DoublePulsar and DarkPulsar, as well as ToxicSerpent.
+	* **Windows Telemetry**
+		* [Abusing Windows Telemetry for Persistence -Christopher Paschen(2020)](https://www.trustedsec.com/blog/abusing-windows-telemetry-for-persistence/)
+		* [Telemetry](https://github.com/Imanfeng/Telemetry)
 	* **Third-Party Programs**
 		* [Persistence with KeePass - Part 1 - James](https://web.archive.org/web/20190816125156/https://medium.com/@two06/persistence-with-keepass-part-1-d2e705326aa6)	
 	* **Traffic Signaling**
@@ -2060,6 +2139,12 @@
 		* [MIDNIGHTTRAIN](https://github.com/slaeryan/MIDNIGHTTRAIN)
 		* [Blogpost](https://slaeryan.github.io/posts/midnighttrain.html)
 			* Covert Stage-3 Persistence Framework utilizing NVRAM variables
+	* **URI Scheme**
+		* [Registering an Application to a URI Scheme - docs.ms](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa767914(v=vs.85)?redirectedfrom=MSDN)
+		* [Exploiting custom protocol handlers in Windows - Andrey Polkovnychenko](https://www.vdoo.com/blog/exploiting-custom-protocol-handlers-in-windows)
+			* In this article we would like to present the mechanism for custom protocol handling in Windows, and how it can be exploited using a simple command injection vulnerability.		
+		* [backoori](https://github.com/giuliocomi/backoori)
+			* Tool aided persistence via Windows URI schemes abuse
 	* **Valid Accounts**
 		* **Default Accounts**
 		* **Domain Accounts**
@@ -2071,6 +2156,8 @@
 		* [waitfor - docs.ms](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/waitfor)
 		* [Persistence – WaitFor - NetbiosX(2020)](https://pentestlab.blog/2020/02/04/persistence-waitfor/)
 			* "Waitfor is a Microsoft binary which is typically used to synchronize computers across a network by sending signals. This communication mechanism can be used in a red team operation in order to download and execution arbitrary code and for persistence. The binary is stored in C:\Windows\System32 folder which means that local administrator privileges are required to perform this activity and both hosts (sender and receiver) needs to be on the same network segment. "
+	* **Windows Subsystem for Linux**
+		* [Unremovable malware with WSL - foresixchange(2019](https://www.forensixchange.com/posts/19_11_01_unremovable_malware_with_wsl/)
 	* **WMI**
 		* [Playing with MOF files on Windows, for fun & profit - xst3nz(2016)](https://poppopret.blogspot.com/2011/09/playing-with-mof-files-on-windows-for.html)
 		* [Windows Management Instrumentation (WMI) Offense, Defense, and Forensics - William Ballenthin, Matt Graeber, Claudiu Teodorescu](https://www.fireeye.com/content/dam/fireeye-www/global/en/current-threats/pdfs/wp-windows-management-instrumentation.pdf)
@@ -2129,10 +2216,13 @@
 					* [DLL Hijacking via URL files - InsertScript](https://insert-script.blogspot.com/2018/05/dll-hijacking-via-url-files.html)
 					* [DLL Hijacking - pentestlab.blog(2017)](https://pentestlab.blog/2017/03/27/dll-hijacking/)
 					* [Understanding how DLL Hijacking works - Astr0baby(2018)](https://astr0baby.wordpress.com/2018/09/08/understanding-how-dll-hijacking-works/)
+					* [ Microsoft File Checksum Integrity Verifier "fciv.exe" v2.05 / DLL Hijack Arbitrary Code Execution - hyp3rlinx(2019)](https://seclists.org/fulldisclosure/2019/Jul/1)
 					* [DLL Hijacking - libertyshell.com(2019)](https://liberty-shell.com/sec/2019/03/12/dll-hijacking/)
 					* [Lateral Movement — SCM and DLL Hijacking Primer - Dwight Hohnstein(2019)](https://posts.specterops.io/lateral-movement-scm-and-dll-hijacking-primer-d2f61e8ab992)
+					* [Windows Server 2008R2-2019 NetMan DLL Hijacking - itm4n(2020](https://itm4n.github.io/windows-server-netman-dll-hijacking/)
 					* [Automating DLL Hijack Discovery - Justin Bui(2020)](https://posts.specterops.io/automating-dll-hijack-discovery-81c4295904b0)
 					* [UAC bypass through Trusted Folder abuse - Jean Maes(2020)](https://redteamer.tips/uac-bypass-through-trusted-folder-abuse/)
+					* [My First 2020 [NonTroll] CVE - DLL Hijacking in NVIDIA System Management Interface (SMI) - Andy Gill(2020)](https://blog.zsec.uk/nvidia-cve-2020/)
 					* [Windows 10 - Task Scheduler service - Privilege Escalation/Persistence through DLL planting - remoteawesomethoughts.blogspot](https://remoteawesomethoughts.blogspot.com/2019/05/windows-10-task-schedulerservice.html)
 						* I was recently busy doing some reverse on an antivirus solution. During this review, I figured out the Windows 10 Task Scheduler service was looking for a missing DLL exposing it to DLL hijacking/planting. It opens for persistence and privilege escalation in case one can write a rogue DLL in a folder pointed by the PATH environment variable. It can also be used as a UAC bypass.
 					* [Use CLR to bypass UAC - 3gstudent](https://3gstudent.github.io/3gstudent.github.io/Use-CLR-to-bypass-UAC/)
@@ -2151,7 +2241,10 @@
 						* This project is a demonstration of advanced DLL hijack techniques. It was released in conjunction with the ["Adaptive DLL Hijacking" blog post](https://silentbreaksecurity.com/adaptive-dll-hijacking/). I recommend you start there to contextualize this code.
 					* [TrustJack](https://github.com/jfmaes/TrustJack)
 					* [HijackHunter](https://github.com/matterpreter/OffensiveCSharp/tree/master/HijackHunter)
+					* [RunHijackHunter](https://github.com/fashionproof/RunHijackHunter)
 			* **DLL Tools**
+				* [Dependencies - An open-source modern Dependency Walker](https://github.com/lucasg/Dependencies)
+					* A rewrite of the old legacy software "depends.exe" in C# for Windows devs to troubleshoot dll load dependencies issues.
 				* [rattler](https://github.com/sensepost/rattler)
 					* Rattler is a tool that automates the identification of DLL's which can be used for DLL preloading attacks.
 				* [injectAllTheThings](https://github.com/fdiskyou/injectAllTheThings)
@@ -2790,6 +2883,11 @@
 				* A VBA implementation of the RunPE technique or how to bypass application whitelisting.
 		* **Applocker**
 			* **101**
+				* [AppLocker architecture and components - docs.ms(2017](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/applocker/applocker-architecture-and-components)
+				* [AppLocker - docs.ms](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/applocker/applocker-overview)
+					* This topic provides a description of AppLocker and can help you decide if your organization can benefit from deploying AppLocker application control policies. AppLocker helps you control which apps and files users can run. These include executable files, scripts, Windows Installer files, dynamic-link libraries (DLLs), packaged apps, and packaged app installers.
+				* [AppLocker architecture and components - docs.ms](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/applocker/applocker-architecture-and-components)
+				* [Windows Applocker Policy – A Beginner’s Guide - AArti Singh(2019)](https://www.hackingarticles.in/windows-applocker-policy-a-beginners-guide/)
 				* [Ultimate AppLocker ByPass List](https://github.com/api0cradle/UltimateAppLockerByPassList)
 					* "The goal of this repository is to document the most common and known techniques to bypass AppLocker. Since AppLocker can be configured in different ways I maintain a verified list of bypasses (that works against the default AppLocker rules) and a list with possible bypass technique (depending on configuration) or claimed to be a bypass by someone. I also have a list of generic bypass techniques as well as a legacy list of methods to execute through DLLs."
 				* [myAPPLockerBypassSummary](https://github.com/0xVIC/myAPPLockerBypassSummary)
@@ -2798,14 +2896,17 @@
 				* [AppLocker Bypass Checklist - netbiosX](https://github.com/netbiosX/Checklists/blob/master/AppLocker.md)
 				* [AppLocker Case study: How insecure is it really? Part 1 oddvar.moe](https://oddvar.moe/2017/12/21/applocker-case-study-how-insecure-is-it-really-part-1/)
 				* AppLocker Case study: How insecure is it really? Part 2](https://oddvar.moe/2017/12/21/applocker-case-study-how-insecure-is-it-really-part-2/)
-				* [AppLocker Bypass – Weak Path Rules](https://pentestlab.blog/2017/05/22/applocker-bypass-weak-path-rules/)
+				* [AppLocker Bypass – Weak Path Rules(2017](https://pentestlab.blog/2017/05/22/applocker-bypass-weak-path-rules/)
 				* [Applocker Bypass via Registry Key Manipulation](https://www.contextis.com/resources/blog/applocker-bypass-registry-key-manipulation/)
-				* [Bypassing AppLocker Custom Rules - 0x09AL Security Blog](https://0x09al.github.io/security/applocker/bypass/custom/rules/windows/2018/09/13/applocker-custom-rules-bypass.html)
-				* [AppLocker Bypass – CMSTP - netbiosX](https://pentestlab.blog/2018/05/10/applocker-bypass-cmstp/)
-				* [Bypassing AppLocker Custom Rules](https://0x09al.github.io/security/applocker/bypass/custom/rules/windows/2018/09/13/applocker-custom-rules-bypass.html)
-				* [A small discovery about AppLocker - oddvar.moe](https://oddvar.moe/2019/05/29/a-small-discovery-about-applocker/)
+				* [Bypassing AppLocker Custom Rules - 0x09AL Security Blog(2018)](https://0x09al.github.io/security/applocker/bypass/custom/rules/windows/2018/09/13/applocker-custom-rules-bypass.html)
+				* [AppLocker Bypass – CMSTP - netbiosX(2018](https://pentestlab.blog/2018/05/10/applocker-bypass-cmstp/)
+				* [Bypassing AppLocker Custom Rules(2018)](https://0x09al.github.io/security/applocker/bypass/custom/rules/windows/2018/09/13/applocker-custom-rules-bypass.html)
+				* [Babushka Dolls or How To Bypass Application Whitelisting and Constrained Powershell - Morten Schenk(2018](https://improsec.com/tech-blog/babushka-dolls-or-how-to-bypass-application-whitelisting-and-constrained-powershell)
+					* [Code](https://github.com/MortenSchenk/Babuska-Dolls)
+				* [A small discovery about AppLocker - oddvar.moe(2019)](https://oddvar.moe/2019/05/29/a-small-discovery-about-applocker/)
 					* 'While I was prepping for a session a while back I made a a little special discovery about AppLocker. Turns out that the files that AppLocker uses under C:\Windows\System32\AppLocker can be used in many cases to bypass a Default AppLocker ruleset.'
 				* [Applocker Bypass via Registry Key Manipulation - Francesco Mifsud](https://www.contextis.com/en/blog/applocker-bypass-via-registry-key-manipulation)
+				* [Applocker and PowerShell: how do they tightly work together? - Emin Atac(2019)](https://p0w3rsh3ll.wordpress.com/2019/03/07/applocker-and-powershell-how-do-they-tightly-work-together/)
 				* [Bypassing AppLocker Custom Rules - 0x09AL](https://0x09al.github.io/security/applocker/bypass/custom/rules/windows/2018/09/13/applocker-custom-rules-bypass.html)
 				* [myAPPLockerBypassSummary](https://github.com/0xVIC/myAPPLockerBypassSummary)
 					* Simple APPLocker bypass summary based on the extensive work of @api0cradle
@@ -2821,6 +2922,10 @@
 			* **Talks/Presentations/Videos**
 				* [GreatSCT: Gotta Catch 'Em AWL - Chris Spehn(CircleCityCon2018)](https://www.irongeek.com/i.php?page=videos/circlecitycon2018/global00-greatsct-gotta-catch-em-awl-chris-spehn)
 					* Great Scott Marty, we went all the way back to 1995! The project is called Great SCT (Great Scott). GreatSCT is an open source project to generate application whitelist (AWL) bypasses. This tool is intended for BOTH red and blue team. Blue team can benefit by testing the publicly known application whitelisting bypass methods. We will review the most common application whitelisting bypass methods and how to utilize these methods with GreatSCT.
+				* [Shackles, Shims, and Shivs - Understanding Bypass Techniques - Mirovengi(Derbycon2016](https://www.irongeek.com/i.php?page=videos/derbycon6/535-shackles-shims-and-shivs-understanding-bypass-techniques-mirovengi)
+					* Our industry recognizes the importance of physical security, but often, we focus on the lock core itself and the challenges with picking it. This talk discuss an overview of the common retention mechanisms and how many of the common forms can be bypassed quicker than picking the lock.
+				* [App-o-Lockalypse now! - Oddvar Moe(Derbycon2018](https://www.irongeek.com/i.php?page=videos/derbycon8/track-2-07-app-o-lockalypse-now-oddvar-moe)
+					* Want to get a good overview of AppLocker and the different AppLocker bypasses and at the same time learn how defenders can harden their environments to prevent them? Then this is a talk you don't want to miss. This talk will cover a vast amount of bypass techniques and how to harden AppLocker to make it even harder to bypass. Giving you help to either start or avoid an App-o-Lockalypse.
 			* **Tools**
 				* [Backdoor-Minimalist.sct](https://gist.github.com/subTee/24c7d8e1ff0f5602092f58cbb3f7d302)
 					* Applocker bypass
@@ -2847,8 +2952,15 @@
 				* [Use attack surface reduction rules to prevent malware infection - docs.ms](https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 			* **Articles/Blogposts/Writeups**
 				* [Bypass Windows Defender Attack Surface Reduction - Emeric Nasi](https://blog.sevagas.com/IMG/pdf/bypass_windows_defender_attack_surface_reduction.pdf)
+				* [Windows ASR Rules & (Re)Enabling WMI When Blocked - FortyNorthSecurity(2018](https://fortynorthsecurity.com/blog/windows-asr-rules/)
 			* **Talks/Presentations/Videos**
+				* [Bypass Windows Exploit Guard ASR - Emeric Nasi(OffensiveCon2019](https://www.youtube.com/watch?v=YMHsuu3qldE)
 			* **Tools**
+		* [Bypass Windows Exploit Guard ASR - Emeric Nasi(OffensiveCon2020)](https://www.youtube.com/watch?v=YMHsuu3qldE&list=PLYvhPWR_XYJmwgLkZbjoEOnf2I1zkylz8&index=16&t=0s)
+			* How to bypass all Microsoft latest "Attack Surface Reduction" rules with malicious Office documents and scripts. The last years, I have been doing some research around Windows security. I liked exploring APT/Redteam techniques and payload used for social engineering and airgap bypass attacks. I am naturally interested into new security features such as ASR. Microsoft introduced Attack Surface Reduction (ASR) as part of Windows defender exploit guard. ASR is composed of a set of configurable rules such as: "Block Office applications from creating child process". While these rules seem effective against common Office and scripts malwares, there are ways to bypass all of them. We will go over each rule related to malicious Office or VB scripts behavior, analyze how It work behind the scene and find a way to bypass it. As example we will take common attack scenario and see how they can be achieved with all rules enforced: Download execute DLL/EXE/script from Office/VBscript; Drop execute embedded DLL/EXE/script from Office/VBscript; Machine takeover with Meterpreter shell from Office/VBscript; Lateral movement/UAC bypass/AMSI bypass/etc.
+
+
+
 	* **Defender**<a name="defender"></a>
 		* **101**
 			* [Next-generation protection in Windows 10, Windows Server 2016, and Windows Server 2019 - docs.ms](https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-antivirus/microsoft-defender-antivirus-in-windows-10)
@@ -2929,6 +3041,8 @@
 			* [Domain Controller Security Logs – how to get at them *without* being a Domain Admin - girlgerms(2016)](https://girl-germs.com/?p=1538)
 			* [Pwning Windows Event Logging with YARA rules - Dylan Halls(2020)](https://blog.dylan.codes/pwning-windows-event-logging/)
 			* [Disabling Windows Event Logs by Suspending EventLog Service Threads - @spottheplanet](https://www.ired.team/offensive-security/defense-evasion/disabling-windows-event-logs-by-suspending-eventlog-service-threads)
+			* [肚脑虫组织（ APT-C-35）疑似针对巴基斯坦军事人员的最新攻击活动 - ](https://blogs.360.cn/post/APT-C-35_target_at_armed_forces_in_Pakistan.html)
+			* [Windows XML Event Log (EVTX)单条日志清除（五）——通过DuplicateHandle获取日志文件句柄删除当前系统单条日志记录 - 3gstudent](https://3gstudent.github.io/3gstudent.github.io/Windows-XML-Event-Log-(EVTX)%E5%8D%95%E6%9D%A1%E6%97%A5%E5%BF%97%E6%B8%85%E9%99%A4-%E4%BA%94-%E9%80%9A%E8%BF%87DuplicateHandle%E8%8E%B7%E5%8F%96%E6%97%A5%E5%BF%97%E6%96%87%E4%BB%B6%E5%8F%A5%E6%9F%84%E5%88%A0%E9%99%A4%E5%BD%93%E5%89%8D%E7%B3%BB%E7%BB%9F%E5%8D%95%E6%9D%A1%E6%97%A5%E5%BF%97%E8%AE%B0%E5%BD%95/)
 		* **Tools**
 			* [Ghost In The Logs](https://github.com/bats3c/Ghost-In-The-Logs)
 				* This tool allows you to evade sysmon and windows event logging, my blog post about it can be found [here](https://blog.dylan.codes/evading-sysmon-and-windows-event-logging/)
@@ -3414,10 +3528,9 @@
 				* In this article I give a variety of examples of how to refer to the notepad.exe executable from the C:\Windows\System32 directory using various path notations. I also discuss how some of these tricks can be used to annoy or fool system administrators and information security analysts.
 		* **Polymorphism**
 			* **101**
-				* [Polymorphism - A Discussion Of Methodology And Implementation - Buz(1999)](https://vxug.fakedoma.in/archive/VxHeaven/lib/vbu01.html)
 			* **Articles/Blogposts/Writeups**
-				* [Engineering antivirus evasion - Vladimir Meier(2020)](https://blog.scrt.ch/2020/06/19/engineering-antivirus-evasion/)
-				* [Engineering antivirus evasion (Part II) - Vladimir Meier(2020)](https://blog.scrt.ch/2020/07/15/engineering-antivirus-evasion-part-ii/)
+				https://blog.scrt.ch/2020/06/19/engineering-antivirus-evasion/
+				https://blog.scrt.ch/2020/07/15/engineering-antivirus-evasion-part-ii/
 			* **Talks/Presentations/Videos**
 				* [Antivirus Evasion through Antigenic Variation (Why the Blacklisting Approach to AV is Broken) - Trenton Ivey, Neal Bridges(Derbycon 2013)](https://www.irongeek.com/i.php?page=videos/derbycon3/4108-antivirus-evasion-through-antigenic-variation-why-the-blacklisting-approach-to-av-is-broken-trenton-iveyneal-bridges)
 					* Description: Think of the last time you got sick. Your immune system is an amazing piece of machinery, but every now and then, something gets past it. Antivirus evasion techniques can become more effective when modeled after infectious diseases. This talk highlights many of the antivirus evasion techniques in use today. Going further, this talk shows how genetic algorithms can quickly and repeatedly “evolve” code to evade many malicious code detection techniques in use today.
@@ -3434,19 +3547,25 @@
 		* **Process Un-Linking**
 			* [Manipulating ActiveProcessLinks to Hide Processes in Userland - @spotheplanet](https://www.ired.team/miscellaneous-reversing-forensics/windows-kernel-internals/manipulating-activeprocesslinks-to-unlink-processes-in-userland)
 		* **Process 'Hardening'**
-			* [D/Invokify PPID Spoofy & BlockDLLs - RastaMouse(2020)](https://offensivedefence.co.uk/posts/ppidspoof-blockdlls-dinvoke/)
-			* [Hiding Process Memory via Anti Forensic Techniques - Ralph Palutke, Frank Block, Patrick Reichenberger, Dominik Stripeika(DFRWS USA2020)](https://www.youtube.com/watch?v=i5po8REiFXw)
+			https://offensivedefence.co.uk/posts/ppidspoof-blockdlls-dinvoke/
+			https://www.youtube.com/watch?v=i5po8REiFXw
 			* [Bypassing VirtualBox Process Hardening on Windows - James Forshaw(2017)](https://googleprojectzero.blogspot.com/2017/08/bypassing-virtualbox-process-hardening.html)
 				* This blog post will describe the implementation of Oracle’s VirtualBox protected process and detail three different, but now fixed, ways of bypassing the protection and injecting arbitrary code into the process. The techniques I’ll present can equally be applied to similar implementations of “protected” processes in other applications.)
 		* **REPL**
 		* **Sandbox Detection & Evasion**
-			* **Articles/Writeups**			
-			* **Tools**
+			* See RT.md
 		* **Signatures**
 			* **Articles/Writeups**			
 				* [Discovering The Anti-Virus Signature and Bypassing it - Oddvar Moe(2019)](https://www.trustedsec.com/blog/discovering-the-anti-virus-signature-and-bypassing-it/)
 				* [Building a custom Mimikatz binary - s3cur3th1ssh1t(2020)](https://s3cur3th1ssh1t.github.io/Building-a-custom-Mimikatz-binary/)
 * **Credential Access**<a name="wincredac"></a>
+	* **Want to learn this stuff? What should you know/study?**
+    	* Windows Authentication Concepts
+		* Windows Logon Scenarios
+    	* Windows Authentication Architecture
+      	* Security Support Provider Interface Architecture
+		* Credentials Processes in Windows Authentication
+		* Group Policy Settings Used in Windows Authentication
 	* **101**
 		* [An Overview of KB2871997 - msrc-blog.ms](https://msrc-blog.microsoft.com/2014/06/05/an-overview-of-kb2871997/)
 			* Increasing complexity of retrieving clear-text creds
@@ -3829,6 +3948,10 @@
 		* **Articles/Blogposts/Writeups**
 			* [Capture a Network Trace without installing anything (& capture a network trace of a reboot) - Chad Duffey(blogs.mdsn)](https://blogs.msdn.microsoft.com/canberrapfe/2012/03/30/capture-a-network-trace-without-installing-anything-capture-a-network-trace-of-a-reboot/)
 		* **Tools**
+			* [raw-socket-sniffer](https://github.com/nospaceships/raw-socket-sniffer)
+	* **RPC**
+		* [The OXID Resolver [Part 1] – Remote enumeration of network interfaces without any authentication - Nicolas Delhaye(2020](https://airbus-cyber-security.com/the-oxid-resolver-part-1-remote-enumeration-of-network-interfaces-without-any-authentication/)
+		* [The OXID Resolver [Part 2] – Accessing a Remote Object inside DCOM - Nicolas Delhaye(2020)](https://airbus-cyber-security.com/the-oxid-resolver-part-2-accessing-a-remote-object-inside-dcom/)
 	* **Sitrep**
 		* **Articles/Blogposts/Writeups**
 			* [Windows Driver and Service enumeration with Python - slacker007(2015)](https://web.archive.org/web/20161001105036/http://cybersyndicates.com/2015/09/windows-driver-and-service-enumeration-with-python/)
@@ -3837,7 +3960,8 @@
 			* [Detecting Hypervisor Presence On Windows 10 - Daax Rynd](https://revers.engineering/detecting-hypervisor-presence-on-windows-10/)
 			* [Windows information gathering using Powershell: a brief cheatsheet - Andrea Fortuna(2019)](https://www.andreafortuna.org/2019/08/29/windows-information-gathering-with-powershell-a-brief-cheatsheet/)
 			* [Get Process List with Command Line Arguments - mubix(2020)](https://malicious.link/post/2020/get-process-list/)
-			* [ What was my IP? Ask DoSvc on Windows 10 - Forense nella Nebbia(2018)](https://forensenellanebbia.blogspot.com/2018/12/what-was-my-ip-ask-dosvc-on-windows-10.html)
+			* [What was my IP? Ask DoSvc on Windows 10 - Forense nella Nebbia(2018)](https://forensenellanebbia.blogspot.com/2018/12/what-was-my-ip-ask-dosvc-on-windows-10.html)
+			* [Windows Event IDs and Others for Situational Awareness - @spotheplanet](https://www.ired.team/offensive-security/enumeration-and-discovery/windows-event-ids-for-situational-awareness)
 		* **Tools**
 			* [netview](https://github.com/mubix/netview)
 				* Netview enumerates systems using WinAPI calls
@@ -3889,10 +4013,13 @@
 		* [AppInit_DLLs in Windows 7 and Windows Server 2008 R2 - docs.ms](https://docs.microsoft.com/en-us/windows/desktop/win7appqual/appinit-dlls-in-windows-7-and-windows-server-2008-r2)
 		* [Alternative psexec: no wmi, services or mof needed - Diablohorn](https://diablohorn.com/2013/10/19/alternative-psexec-no-wmi-services-or-mof-needed/)
 			* [Poc](https://github.com/DiabloHorn/DiabloHorn/tree/master/remote_appinitdlls)
+	* **BGInfo**
+		* [Exploiting BGInfo to Infiltrate a Corporate Network - Dolev Taler(2020)](https://www.varonis.com/blog/exploiting-bginfo-to-infiltrate-a-corporate-network/)
 	* **DCOM**
 		* [Lateral movement using excel application and dcom(2017)](https://enigma0x3.net/2017/09/11/lateral-movement-using-excel-application-and-dcom/)
 		* [Lateral Movement Using Outlook’s CreateObject Method and DotNetToJScript - Matt Nelson(2017)](https://posts.specterops.io/lateral-movement-using-outlooks-createobject-method-and-dotnettojscript-a88a81df27eb)
 		* [New lateral movement techniques abuse DCOM technology - Philip Tsukerman(2018)](https://www.cybereason.com/blog/dcom-lateral-movement-techniques)
+		* [Lateral Movement Using internetexplorer.Application Object (COM) - homjxi0e(2018)](https://homjxi0e.wordpress.com/2018/02/15/lateral-movement-using-internetexplorer-application-object-com/)
 		* [Lateral Movement with PowerPoint and DCOM - Attactics(2018)](https://attactics.org/2018/02/dcom-lateral-movement-powerpoint/)
 		* [T1175: Lateral Movement via DCOM - @spotheplanet](https://www.ired.team/offensive-security/lateral-movement/t1175-distributed-component-object-model)
 		* [I Like to Move It: Windows Lateral Movement Part 2 – DCOM - Dominic Chell(2020)](https://www.mdsec.co.uk/2020/09/i-like-to-move-it-windows-lateral-movement-part-2-dcom/)
@@ -3929,12 +4056,15 @@
 			* [Pass the Hash with Kerberos - mubix](https://malicious.link/post/2018/pass-the-hash-with-kerberos/)
 				* This blog post may be of limited use, most of the time, when you have an NTLM hash, you also have the tools to use it. But, if you find yourself in a situation where you don’t have the tools and do happen to have kerberos tools, you can pass the hash with it.
 			* [Pass-The-Hash with RDP in 2019 - Acebond](https://shellz.club/pass-the-hash-with-rdp-in-2019/)
+			* [Named Pipe Pass-the-Hash - s3cur3th1ssh1t(2021)](https://s3cur3th1ssh1t.github.io/Named-Pipe-PTH/)
 		* **Tools**
 			* [smbexec](https://github.com/pentestgeek/smbexec)
 				* A rapid psexec style attack with samba tools
 				* [Blogpost that inspired it](http://carnal0wnage.attackresearch.com/2012/01/psexec-fail-upload-and-exec-instead.html)
 			* [pth-toolkit I.e Portable pass the hash toolkit](https://github.com/byt3bl33d3r/pth-toolkit)
 				* A modified version of the passing-the-hash tool collection https://code.google.com/p/passing-the-hash/ designed to be portable and work straight out of the box even on the most 'bare bones' systems
+			* [SharpNoPSExec](https://github.com/juliourena/SharpNoPSExec)
+				* Get file less command execution for lateral movement.
 	* **PS-Remoting**
 		* **101**
 			* [Running Remote Commands - docs.ms](https://docs.microsoft.com/en-us/powershell/scripting/learn/remoting/running-remote-commands?view=powershell-7)
@@ -3950,7 +4080,8 @@
 	* **Protocol Handler**
 		* **Articles/Blogposts/Writeups**
 			* [Lateral movement using URL Protocol - Matt harr0ey](https://medium.com/@mattharr0ey/lateral-movement-using-url-protocol-e6f7d2d6cf2e)
-		* **Tools**	
+			* [Attack Surface Analysis - Part 2 - Custom Protocol Handlers - Parsia(2021)](https://parsiya.net/blog/2021-03-17-attack-surface-analysis-part-2-custom-protocol-handlers/)
+		* **Tools**
 			* [PoisonHandler](https://github.com/Mr-Un1k0d3r/PoisonHandler)
 				* This technique is registering a protocol handler remotely and invoke it to execute arbitrary code on the remote host. The idea is to simply invoke start handler:// to execute commands and evade detection.
 	* **Port-Forwarding & Proxies**
@@ -3985,6 +4116,10 @@
 			* [SharpMove](https://github.com/0xthirteen/SharpMove)
 			* [SCShell](https://github.com/Mr-Un1k0d3r/SCShell)
 				* SCShell is a fileless lateral movement tool that relies on ChangeServiceConfigA to run commands. The beauty of this tool is that it does not perform authentication against SMB. Everything is performed over DCERPC.
+	* **ShadowMove**
+		* [ShadowMove: Lateral Movement by Duplicating Existing Sockets - @spotheplanet](https://www.ired.team/offensive-security/lateral-movement/shadowmove-lateral-movement-by-stealing-duplicating-existing-connected-sockets)
+		* [Windows ShadowMove Socket Duplication](https://github.com/0xcpu/winsmsd)
+			* The tool (/POC) is a simple programming exercise in order to replicate the socket duplication technique explained in [ShadowMove: A Stealthy Lateral Movement Strategy](https://www.usenix.org/system/files/sec20summer_niakanlahiji_prepub.pdf).
 	* **SMB**
 		* **Articles/Blogposts/Writeups**
 			* [Lateral movement: A deep look into PsExec - Daniel Munoz(2018)](https://www.contextis.com/en/blog/lateral-movement-a-deep-look-into-psexec)
@@ -4034,6 +4169,8 @@
 				* The WMI shell tool that we have developed allows us to execute commands and get their output using only the WMI infrastructure, without any help from other services, like the SMB server. With the wmi-shell tool we can execute commands, upload files and recover Windows passwords remotely using only the WMI service available on port 135.
 			* [WMIcmd](https://github.com/nccgroup/WMIcmd)
 				* A command shell wrapper using only WMI for Microsoft Windows
+			* [WMIHACKER](https://github.com/360-Linton-Lab/WMIHACKER)
+				* A Bypass Anti-virus Software Lateral Movement Command Execution Tool 
 	* **WSH**
 		* [Lateral Movement using WSHController/WSHRemote objects (IWSHController and IWSHRemote interfaces) - hexacorn(2018)](https://www.hexacorn.com/blog/2018/08/18/lateral-movement-using-wshcontroller-wshremote-objects-iwshcontroller-and-iwshremote-interfaces/)
 	* **(Ab)Using 'Legitimate' Applications already installed**
@@ -4057,6 +4194,12 @@
 			* [Decrypting IIS Passwords to Break Out of the DMZ: Part 1 ](https://blog.netspi.com/decrypting-iis-passwords-to-break-out-of-the-dmz-part-1/)
 			* [Decrypting IIS Passwords to Break Out of the DMZ: Part 2](https://blog.netspi.com/decrypting-iis-passwords-to-break-out-of-the-dmz-part-2/)
 		* [Recovering Plaintext Domain Credentials from WPA2 Enterprise on a Compromised Host - zc00l(2018)](https://0x00-0x00.github.io/research/2018/11/06/Recovering-Plaintext-Domain-Credentials-From-WPA2-Enterprise-on-a-compromised-host.html)
+	* **Generic**
+		* [Pillager](https://github.com/brittonhayes/pillager)
+			* Pillager is designed to provide a simple means of leveraging Go's strong concurrency model to recursively search directories for sensitive information in files. Pillager does this by standing on the shoulders of a few giants. Once pillager finds files that match the specified pattern, the file is scanned using a series of concurrent workers that each take a line of the file from the job queue and hunt for sensitive pattern matches. The available pattern filters can be defined in a rules.toml file or you can use the default ruleset.
+	* **Browser**
+		* [Adamantium-Thief](https://github.com/LimerBoy/Adamantium-Thief)
+			* Get chromium based browsers: passwords, credit cards, history, cookies, bookmarks, autofill.
 	* **CC**
 		* [SearchForCC](https://github.com/eelsivart/SearchForCC)
 			* A collection of open source/common tools/scripts to perform a system memory dump and/or process memory dump on Windows-based PoS systems and search for unencrypted credit card track data.
@@ -4083,7 +4226,6 @@
 * **Exfiltration**
 	* **Articles/Blogposts/Writeups**
 		* [WMI & PowerShell: An Introduction to Copying Files - FortyNorthSecurity](https://fortynorthsecurity.com/blog/wmi/)
-
 
 
 
@@ -6432,6 +6574,7 @@
 * **101**
 	* [Process Injection Techniques — Gotta Catch Them All - Itzik Kotler, Amit Klein(BHUSA19)](https://www.youtube.com/watch?v=xewv122qxnk)
 		* [Paper](https://i.blackhat.com/USA-19/Thursday/us-19-Kotler-Process-Injection-Techniques-Gotta-Catch-Them-All-wp.pdf)	
+	* [‘Plata o plomo’ code injections/execution tricks - Hexacorn](https://www.hexacorn.com/blog/2019/05/26/plata-o-plomo-code-injections-execution-tricks/)
 * **3 Base Primitive Categories**
 	* **Process Spawning Techniques**
 	* **Injecting During Process Initialization**
@@ -6631,10 +6774,49 @@
 	* [Windows Process Injection: DNS Client API - modexp(2019)](https://modexp.wordpress.com/2019/08/08/windows-process-injection-dnsapi/)
 	* [Poc](https://github.com/odzhan/injection/tree/master/dns)
 * **Process Doppelganging**
+	* **101**
+		* [Lost in Transaction: Process Doppelgänging - Tal Liberman, Eugene Kogan(BHEU 2017)](https://www.youtube.com/watch?v=XmWOj-cfixs)
+			* [Slides](https://www.blackhat.com/docs/eu-17/materials/eu-17-Liberman-Lost-In-Transaction-Process-Doppelganging.pdf)
+			* Process Hollowing is a technique first introduced years ago by attackers to thwart the mitigation capabilities of security products. However, most of today's solutions are able to detect and prevent such notorious attacks. In this talk, we will present a new technique, dubbed Process Doppelgänging, which has similar advantages but is much harder to detect - let alone prevent. 
+		* [What is Process Doppelganging & How is it Executed? - Suvarna Trigune(2018)](https://www.reveantivirus.com/blog/en/process-doppelganging)
+		* [TAU-TIN - Process Doppelgang Evasion Technique - esullivan(2017)](https://community.carbonblack.com/t5/Threat-Advisories-Documents/TAU-TIN-Process-Doppelgang-Evasion-Technique/ta-p/62305)
+	* **Information**
+		* [Process Doppelgänging – a new way to impersonate a process - hasherezade(2017)](https://hshrzd.wordpress.com/2017/12/18/process-doppelganging-a-new-way-to-impersonate-a-process/)
+		* [Process Doppelgänging: New Malware Evasion Technique Works On All Windows Versions - Mohit Kumar(2017)](https://thehackernews.com/2017/12/malware-process-doppelganging.html)
+		* [Process Doppelgänging meets Process Hollowing in Osiris dropper - hasherezade(2018)](https://blog.malwarebytes.com/threat-analysis/2018/08/process-doppelganging-meets-process-hollowing_osiris/)
+		* [On Process Doppelganging and developing an unpacker for it - KrabsOnSecurity(2018)](https://krabsonsecurity.com/2018/01/17/on-process-doppelganging-and-developing-an-unpacker-for-it/)
+		* [In NTDLL I Trust – Process Reimaging and Endpoint Security Solution Bypass - Eoin Carroll, Cedric Cochin, Steve Povolny, Steve Hearnden(2019)](https://www.mcafee.com/blogs/other-blogs/mcafee-labs/in-ntdll-i-trust-process-reimaging-and-endpoint-security-solution-bypass/)
+		* [Process Doppelganging Notes - hyp3rv3locity(2020)](https://hyp3rv3locity.blogspot.com/2019/10/process-doppelganging-notes.html)
+		* [Process Doppelganging - @spotheplanet](https://www.ired.team/offensive-security/code-injection-process-injection/process-doppelganging)
+	* **Performing**
+	* **PoCs**
+		* [process_doppelganging](https://github.com/hasherezade/process_doppelganging)
+			* "My implementation of enSilo's Process Doppelganging (PE injection technique)"
+		* [Start-Eidolon.ps1](https://github.com/FuzzySecurity/PowerShell-Suite/blob/master/Start-Eidolon.ps1)
+	* **Detection**
+		* [Threat Hunting #20 - Detecting Process Doppelgänging using event 4985 - menasec(2019)](https://blog.menasec.net/2019/02/threat-hunting-24-detecting-process.html)
+* **DoppelGate**
+	* **101**
+	* **Info**
+	* **Performing**
+	* **Detection**
+	* **PoC**
+		* [DoppelGate](https://github.com/asaurusrex/DoppelGate)
+			*  DoppelGate relies on reading ntdll on disk to grab syscall stubs, and patches these syscall stubs into desired functions to bypass Userland Hooking. 
 * **DoubleAgent**
 	* [DOUBLEAGENT: Zero-Day Code Injection AND Persistence Technique - Cybellum(2017)](https://cybellum.com/doubleagentzero-day-code-injection-and-persistence-technique/)
 	* [Masquerading Windows processes like a DoubleAgent. - Philippe Vogler(2020)](https://sensepost.com/blog/2020/masquerading-windows-processes-like-a-doubleagent./)
 * **Earlybird Injection**
+	* **101**
+		* [New ‘Early Bird’ Code Injection Technique Discovered - Hod Gavriel, Boris Erbesfeld(2018)](https://www.cyberbit.com/blog/endpoint-security/new-early-bird-code-injection-technique-discovered/)
+	* **Info**
+		* [Hackers Found Using A New Code Injection Technique to Evade Detection - Mohit Kumar(2018)](https://thehackernews.com/2018/04/early-bird-code-injection.html)
+		* [DorkBot: An Investigation - Mark Lechtik(2018)](https://research.checkpoint.com/2018/dorkbot-an-investigation/)
+		* [The “Early Bird Special” – a new twist on the “Early Bird” injection technique - Avi Lamay(2019)]
+	* **Performing**
+		* [Early Bird APC Queue Code Injection - @spotheplanet](https://www.ired.team/offensive-security/code-injection-process-injection/early-bird-apc-queue-code-injection)
+	* **Detection**
+	* **PoC**	
 * **Extra Window Bytes**
 	* **101**
 		* [Process Injection: Extra Window Memory Injection - MITRE ATT&CK(2020)](https://attack.mitre.org/techniques/T1055/011/)
@@ -6645,6 +6827,23 @@
 	* **PoCs**
 		* [Poc](https://github.com/odzhan/injection/tree/master/extrabytes)
 * **Gargoyle**
+	* **101**
+		* [gargoyle, a memory scanning evasion technique - Josh Lospinoso(2017)](https://lospi.net/security/assembly/c/cpp/developing/software/2017/03/04/gargoyle-memory-analysis-evasion.html)
+	* **Info**
+		* [Cobalt Strike 3.12 – Blink and you’ll miss it - CobaltStrike(2018)](https://blog.cobaltstrike.com/2018/09/06/cobalt-strike-3-12-blink-and-youll-miss-it/)
+	* **Performing**
+		* [Bypassing Memory Scanners with Cobalt Strike and Gargoyle - FSecure Labs(2018)](https://labs.f-secure.com/blog/experimenting-bypassing-memory-scanners-with-cobalt-strike-and-gargoyle/)
+	* **Detection**
+		* [Hunting for Gargoyle Memory Scanning Evasion - Aliz Hammond(2018)](https://blog.f-secure.com/hunting-for-gargoyle-memory-scanning-evasion/)
+		* [Gargoyle Hunting In-Depth — Presented by Aliz Hammond(InfoSec in the City2020)](https://www.youtube.com/watch?v=T73GK1Y8jLU)
+			* Detecting certain user-mode code-hiding techniques, such as Josh Lospinoso's 'Gargoyle', is almost impossible from user-space. In this talk, I will examine Gargoyle, and explain how it can be detected from kernel mode. I will first walk through using WinDbg to locate hidden code and then write a Volatility plugin to turn this process into a practical method of detecting real-world attacks — in the process, adding a reliable method of differentiating these from legitimate behavior. No prior kernel knowledge is needed, but those with a background in WinDbg, Windows internals, forensics, and/or Volatility will get the most from this talk.
+		* [HookTracer: A System for Automated and Accessible API Hooks Analysis - Andrew Case, Mohammad M.Jalalzai, Md Firoz-Ul-Amin, Ryan D.Maggio, Aisha Ali-Gombe, Mingxuan Sun, Golden G.Richard III(2019)]
+			* The use of memory forensics is becoming commonplace in digital investigation and incident response, as it provides critically important capabilities for detecting sophisticated malware attacks, including memory-only malware components. In this paper, we concentrate on improving analysis of API hooks, a technique commonly employed by malware to hijack the execution flow of legitimate functions. These hooks allow the malware to gain control at critical times and to exercise complete control over function arguments and return values. Existing techniques for detecting hooks, such the Volatility plugin apihooks, do a credible job, but generate numerous false positives related to non-malicious use of API hooking. Furthermore, deeper analysis to determine the nature of hooks detected by apihooks typically requires substantial skill in reverse engineering and an extensive knowledge of operating systems internals. In this paper, we present a new, highly configurable tool called hooktracer, which eliminates false positives, provides valuable insight into the operation of detected hooks, and generates portable signatures called hook traces, which can be used to rapidly investigate large numbers of machines for signs of malware infection.
+		* [Hunting for Ghosts in Fileless Attacks - Buddy Tancio(2019)](https://www.sans.org/reading-room/whitepapers/malicious/paper/38960)
+			* Hunting for a fileless threat can be a tedious and labor-intensive task for any analyst. It is, most often than not, extremely time-consuming and requires a significant amount of data gathering. On top of that, the traditional tools, methods, and defenses seem to be less effective when dealing with these almost invisible threats. Threat actors are frequently using attack techniques that work directly from the memory or using legitimate tools or services pre-installed in the system to achieve their goals (Trend Micro, 2017). It is a popular technique among targeted attacks and advanced persistent threats (APT), and now it has been adopted by conventional malware such as trojans, ransomwares, and even the most recent emerging threat – cryptocurrency miners. In some incidents, searching for a malicious file that resides in the hard drive seems to be insufficient. This study explores the different variations of fileless attacks that targeted the Windows operating system and what kind of artifacts or tools can provide clues for forensic investigation. 
+	* **PoC**	   	
+      	* [dotnet-gargoyle](https://github.com/countercept/dotnet-gargoyle)
+    		* A spiritual .NET equivalent to the Gargoyle memory scanning evasion technique
 * **GhostWriting Injection**
 	* **101**
 		* [A paradox: Writing to another process without openning it nor actually writing to it - txipi(2007)](http://blog.txipinet.com/2007/04/05/69-a-paradox-writing-to-another-process-without-openning-it-nor-actually-writing-to-it/)
@@ -6655,21 +6854,141 @@
 	* **Performing**	
 	* **PoCs**
 		* [GhostWriting](https://github.com/c0de90e7/GhostWriting)
+* **Process Herpaderping**
+	* **101**
+	* **Info**
+		* [Process Herpaderping](https://jxy-s.github.io/herpaderping/)
+			* Process Herpaderping is a method of obscuring the intentions of a process by modifying the content on disk after the image has been mapped.
+	* **Performing**
+	* **Detection**
+	* **PoC**
 * **Process Hollowing**
+	* **101**
+		* [Process Hollowing - John Leitch](https://www.autosectools.com/process-hollowing.pdf)
+		* [Process Hollowing](https://github.com/m0n0ph1/Process-Hollowing)
+			* Process hollowing is yet another tool in the kit of those who seek to hide the presence of a process. The idea is rather straight forward: a bootstrap application creates a seemingly innocent process in a suspended state. The legitimate image is then unmapped and replaced with the image that is to be hidden. If the preferred image base of the new image does not match that of the old image, the new image must be rebased. Once the new image is loaded in memory the EAX register of the suspended thread is set to the entry point. The process is then resumed and the entry point of the new image is executed.
+	* **Information**
+		* [Analyzing Malware Hollow Processes - Eric Monti(2011)(https://www.trustwave.com/en-us/resources/blogs/spiderlabs-blog/analyzing-malware-hollow-processes/)
+		* [Understanding Process Hollowing - Andrea Fortuna(2017)](https://www.andreafortuna.org/2017/10/09/understanding-process-hollowing/)
+		* [RunPE: a practical example of Process Hollowing technique - Andrea Fortuna(2017)](https://www.andreafortuna.org/2017/11/22/runpe-a-practical-example-of-process-hollowing-technique/)
+		* [7th Meetup – Reversing and Investigating Malware Evasive Tactics – Hollow Process Injection - Monnappa(2017)](https://cysinfo.com/7th-meetup-reversing-and-investigating-malware-evasive-tactics-hollow-process-injection/)
+		* [New Wave of Hancitor Comes with New Evasive Techniques - Roy Moshailov(2016)](https://blog.morphisec.com/hancitor-macro-malware-with-process-hollowing)
+		* [What Malware Authors Don't Want You to Know - Evasive Hollow Process Injection - Monnappa K A(BlackHatUSA2017)](https://www.youtube.com/watch?v=9L9I1T5QDg4)
+			* [Paper](https://www.blackhat.com/docs/asia-17/materials/asia-17-KA-What-Malware-Authors-Don%27t-Want-You-To-Know-Evasive-Hollow-Process-Injection-wp.pdf)
+			* Hollow process injection is a code injection technique used by the malware authors to blend in with legitimate processes on the system and remain undetected; there are documented procedures to detect hollow process injection. This presentation focuses on undocumented hollow process injection techniques.
+	* **Performing**
+		* [Process Hollowing and Portable Executable Relocations - @spotheplanet](https://www.ired.team/offensive-security/code-injection-process-injection/process-hollowing-and-pe-image-relocations)
+		* [](https://www.andreafortuna.org/2017/11/22/runpe-a-practical-example-of-process-hollowing-technique/)
+		* [Process Injection Techniques andDetection using the Volatility Framework - Sotiria Balaoura(2018)](http://dione.lib.unipi.gr/xmlui/bitstream/handle/unipi/11578/Balaoura_MTE1623.pdf?sequence=1&isAllowed=y)
+		* [Process Injection - Part III - 3xpl01tc0d3r(2019)](https://3xpl01tc0d3r.blogspot.com/2019/10/process-injection-part-iii.html)
+		* [Parent PID Spoofing - Renos Nikolaou(2019)](https://medium.com/@r3n_hat/parent-pid-spoofing-b0b17317168e)
+		* [Process hollowing - unprotect]()
+	* **PoCs**
+		* [EvasiveProcessHollowing](https://github.com/reevesrs24/EvasiveProcessHollowing)
+			* Proof of concept code which demonstrate a few of the "evasive process hollowing" techniques analyzed in the white paper "What Malware Authors Don't want you to know - Evasive Hollow Process Injection" written by Monnappa K A. The PoC code can be used as a testbed to replicate the memory forensics findings discussed in the white paper.
+		* [ProcessHollowing](https://github.com/ambray/ProcessHollowing)
+			* Simple Process Hollowing in C#
+	* **Malware**
+		* [Malware Analysis – Dridex & Process Hollowing - Luis Rocha(2015)](https://countuponsecurity.com/2015/12/07/malware-analysis-dridex-process-hollowing/)
+		* [Dridex’s Bag of Tricks: An Analysis of its Masquerading and Code Injection Techniques - Ratnesh Pandey(2019)](https://www.bromium.com/dridex-threat-analysis-july-2019-variant/)
+	* **Tools**
+		* [TikiTorch](https://github.com/rasta-mouse/TikiTorch)
+			* TikiTorch was named in homage to CACTUSTORCH by Vincent Yiu. The basic concept of CACTUSTORCH is that it spawns a new process, allocates a region of memory, then uses CreateRemoteThread to run the desired shellcode within that target process. Both the process and shellcode are specified by the user.
 * **(Un-)Hooking**
+	* **Un-Hooking**
+		* **101**
+			* 'Modifying memory ‘inline’ to ‘hook’ functions and redirect execution'
+		* **Info**
+		* **Performing**
+		* **Links**
+	* **SetWindowsHookEx**
 * **Inject-Me**
-* **KernelControlTable** - ehhhhhhhhhhh
+	* **101**
+		* [Inject Me x64 Injection-less Code Injection - DeepInstinct(2019)](https://www.deepinstinct.com/2019/07/24/inject-me-x64-injection-less-code-injection/)
+			* Malware authors are always looking for new ways to achieve code injection, as it enables them to run their code in remote processes. Code Injection allows hackers to better hide their presence, gain persistence and leverage other processes’ data and privileges. Finding and implementing new, stable methods for code injection is becoming more and more challenging as traditional techniques are now widely detected by various security solutions or limited by native OS protections.  Inject-Me is a new method to inject code into a remote process in x64. Inject-Me is in fact “injection-less”, meaning that the remote (target) process is manipulated to read data from the injecting process, copy and execute it. The manipulation is mainly based on abusing ReadProcessMemory and calling conventions in X64. In addition to presenting Inject-Me, we mention a generalized approach to copying data in remote processes to recreate shellcode from the injecting process.
+		* [Please Inject me, a X64 code injection - Alon Weinberg(2019)](https://www.youtube.com/watch?v=8-TcLgkPeLc)
+		* [Please Inject me, a X64 code injection - Alon Weinberg(Defcon27)](https://www.youtube.com/watch?v=dKrNJhbGgHY)
+	* **Info**
+	* **Performing**
+	* **Detection**
+	* **PoC**	
+* **Kernel Callback Table**
+	* **101**
+		* [Windows Process Injection: KernelCallbackTable used by FinFisher / FinSpy - odzhan(2019)](https://modexp.wordpress.com/2019/05/25/windows-injection-finspy/)
+		* [Windows Process Injection: Multiple Provider Router (MPR) DLL and Shell Notifications - odzhan(2019)](https://modexp.wordpress.com/2019/08/05/windows-process-injection-scn/)
+	* **Info**
+		* [FinFisher exposed: A researcher’s tale of defeating traps, tricks, and complex virtual machines - Andrea Allievi, Elia Florio](https://www.microsoft.com/security/blog/2018/03/01/finfisher-exposed-a-researchers-tale-of-defeating-traps-tricks-and-complex-virtual-machines/)
+		* [You Failed ! - ivanlef0u.tuxfamily.org(2007)](http://www.ivanlef0u.tuxfamily.org/?p=68)
+		* [Kernel exploitation – r0 to r3 transitions via KeUserModeCallback - j00ru(2010)](https://j00ru.vexillium.org/2010/09/kernel-exploitation-r0-to-r3-transitions-via-keusermodecallback/)
+		* [Callgate to user : nt!KeUserModeCallback & ROP / MDL - zer0mem(2013)](http://www.zer0mem.sk/?p=410)
+		* [How to run userland code from the kernel on Windows - Thierry Franzetti(2014)](https://thisissecurity.stormshield.com/2014/04/08/how-to-run-userland-code-from-the-kernel-on-windows/)
+		* [How to run userland code from the kernel on Windows – Version 2.0 - Edouard S(2016)](https://thisissecurity.stormshield.com/2016/10/19/how-to-run-userland-code-from-the-kernel-on-windows-version-2-0/)
+	* **Performing**
+	* **Detection**
+	* **PoC**
+		* [kct](https://github.com/odzhan/injection/tree/master/kct)
 * **KnownDLLs Cache Poisoning**
+	* **101**
+		* [Windows Code Injection: Bypassing CIG Through KnownDlls - James Forshaw(2019)](https://www.tiraniddo.dev/2019/08/windows-code-injection-bypassing-cig.html)
+			* TL;DR; This blog post describes a technique to inject a DLL into a process using only Duplicate Handle process access (caveats apply) which will also bypass Code Integrity Guard.
+		* [Windows Process Injection: KnownDlls Cache Poisoning - odzhan(2019)](https://modexp.wordpress.com/2019/08/12/windows-process-injection-knowndlls/)
+	* **Info**
+		* [Hotpatchingthe Hotpatcher - Alex Ionescu(Syscan2013)](https://infocondb.org/con/recon/recon-2018/unknown-known-dlls-and-other-code-integrity-trust-violations-breaking-signature-guarantees-in-windows)
+	* **Performing**
+		* [Injection into a Process Using KnownDlls - Kotik Anton(2012)](https://www.codeproject.com/Articles/325603/Injection-into-a-Process-Using-KnownDlls)
+			* In his article, we will consider an interesting, universal and rarely used method of code injection into a Windows process using KnownDlls sections. To demonstrate the method work we will develop a sample project to inject into all running processes and intercept some calls from ws2_32.dll.
+	* **Detection**
+	* **PoC**
+		* [knowndlls](https://github.com/odzhan/injection/tree/master/knowndlls)	
 * **Mapping Injection**
+	* **101**
+		* [Mapping-Injection - Antonio Coco(2020)](https://github.com/antonioCoco/Mapping-Injection/tree/1.1)
+	* **Info**
+	* **Performing**
+		* [Weaponizing Mapping Injection with Instrumentation Callback for stealthier process injection - splinter_code(2020)](https://splintercod3.blogspot.com/p/weaponizing-mapping-injection-with.html)
+	* **Detection**
+	* **PoC**
+		* [Mapping-Injection](https://github.com/antonioCoco/Mapping-Injection/tree/1.1)
 * **Multiple Provider Router (MPR) DLL and Shell Notifications**
+	* **101**
+		* [Windows Process Injection: Multiple Provider Router (MPR) DLL and Shell Notifications - odzhan(2019)](https://modexp.wordpress.com/2019/08/05/windows-process-injection-scn/)
+	* **Info**
+	* **Performing**
+	* **Detection**
+	* **PoC**
+		* [mpr](https://github.com/odzhan/injection/tree/master/mpr)
 * **NINA**
 	* **101**
 		* [NINA: x64 Process Injection (NINA: No Injection, No Allocation x64 Process Injection Technique.) - NtRaiseHardError(2020)]
 			* [Code](https://github.com/NtRaiseHardError/NINA)
 * **NtCreate**
+	* **101**
+		* [NtCreateSection - Undocumented functions of NTDLL](http://undocumented.ntinternals.net/index.html?page=UserMode%2FUndocumented%20Functions%2FNT%20Objects%2FSection%2FNtCreateSection.html)
+		* [RtlCreateUserThread - Undocumented functions of NTDLL](https://undocumented.ntinternals.net/index.html?page=UserMode%2FUndocumented%20Functions%2FExecutable%20Images%2FRtlCreateUserThread.html)
+		* [Section Objects and Views - docs.ms](https://docs.microsoft.com/en-us/windows-hardware/drivers/kernel/section-objects-and-views)
+	* **Performing**
+		* [NtCreateSection + NtMapViewOfSection Code Injection - @spotheplanet](https://www.ired.team/offensive-security/code-injection-process-injection/ntcreatesection-+-ntmapviewofsection-code-injection)
 * **.NET/C#**
-	* [.NET Internals and Code Injection](https://ntcore.com/files/netint_injection.htm)
-		 * This article is the obvious culmination of the previous effort of writing the Rebel.NET application and the first of a two series of articles about the .NET framework internals and the protections available for .NET assemblies. The next article will be about .NET native compiling. As the JIT inner workings haven't been analyzed yet, .NET protections are quite naļf nowadays. This situation will rapidly change as soon as the reverse engineering community will focus its attention on this technology. These two articles are aimed to raise the consiousness about the current state of .NET protections and what is possible to achieve but hasn't been done yet. In particular, the current article about .NET code injection represents, let's say, the present, whereas the next one about .NET native compiling represents the future. What I'm presenting in these two articles is new at the time I'm writing it, but I expect it to become obsolete in less than a year. Of course, this is obvious as I'm moving the first steps out from current .NET protections in the direction of better ones. But this article isn't really about protections: exploring the .NET framework internals can be useful for many purposes. So, talking about protections is just a means to an end.		
+	* **101**
+	* **Info**
+		* [.NET Internals and Code Injection](https://ntcore.com/files/netint_injection.htm)
+			* This article is the obvious culmination of the previous effort of writing the Rebel.NET application and the first of a two series of articles about the .NET framework internals and the protections available for .NET assemblies. The next article will be about .NET native compiling. As the JIT inner workings haven't been analyzed yet, .NET protections are quite naļf nowadays. This situation will rapidly change as soon as the reverse engineering community will focus its attention on this technology. These two articles are aimed to raise the consiousness about the current state of .NET protections and what is possible to achieve but hasn't been done yet. In particular, the current article about .NET code injection represents, let's say, the present, whereas the next one about .NET native compiling represents the future. What I'm presenting in these two articles is new at the time I'm writing it, but I expect it to become obsolete in less than a year. Of course, this is obvious as I'm moving the first steps out from current .NET protections in the direction of better ones. But this article isn't really about protections: exploring the .NET framework internals can be useful for many purposes. So, talking about protections is just a means to an end.		
+		* [Process Injection using DInvoke - RastaMouse](https://rastamouse.me/blog/process-injection-dinvoke/)
+	* **Performing**
+		* [DLL Injection via a Custom .NET Garbage Collector - @spotheplanet](https://ired.team/offensive-security/code-injection-process-injection/injecting-dll-via-custom-.net-garbage-collector-environment-variable-complus_gcname)
+		* [Injecting .NET Assembly to an Unmanaged Process - @spotheplanet](https://www.ired.team/offensive-security/code-injection-process-injection/injecting-and-executing-.net-assemblies-to-unmanaged-process)
+	* **PoCs**
+		* [clrinject](https://github.com/jonatan1024/clrinject)
+			* Injects C# EXE or DLL Assembly into any CLR runtime and AppDomain of another process. The injected assembly can then access static instances of the injectee process's classes and therefore affect it's internal state.
+		* [native-dotnet-code-injection](https://github.com/sunsided/native-dotnet-code-injection)
+			* Injects a native bootstrap DLL into the target process by calling LoadLibrary as a remote thread and then calls the initialization method of the .NET runtime (hosting API). After that, a .NET assembly is loaded into the default application domain and executed.
+		* [SharpNeedle](https://github.com/ChadSki/SharpNeedle)
+			* A project for properly injecting C# dlls into other processes.(...but also walking the export address table and calling a method on your dll.)
+		* [GhostLoader](https://github.com/TheWover/GhostLoader)
+			* GhostLoader - AppDomainManager - Injection - 攻壳机动队
+		* [Malwaria](https://github.com/nicholasmckinney/Malwaria)
+		* [C# Memory Injection Examples](https://github.com/pwndizzle/c-sharp-memory-injection)
+			* A set of scripts that demonstrate how to perform memory injection.
 * **PE Injection**
 	* **101**
 		* [PE Format - docs.ms](https://docs.microsoft.com/en-us/windows/win32/debug/pe-format?redirectedfrom=MSDN)
@@ -6689,10 +7008,11 @@
 		* [PE Section Header Injection using Code Cave - ]
 		* [Reflective PE Injection in Windows 10 1909 - HUBBL3](https://www.bc-security.org/post/reflective-pe-injection-in-windows-10-1909/)
 		* [[RedDev Series #1] PE Injection Trick - Chiam Yj(2020)](https://medium.com/@cyjien/pe-injection-trick-d044977f4791)
+		* [Bypassing AV via in-memory PE execution - bats3c(2020)](https://blog.dylan.codes/bypassing-av-via/)
 	* **Detection**
 		* See the [Logging, System Monitoring and Threat Hunting](./L-SM-TH.md) Page.
 	* **PoCs**
-		* [ PE-Inject - DelphiBasics(2010)](http://www.delphibasics.info/home/delphibasicscounterstrikewireleases/pe-inject)
+		* [PE-Inject - DelphiBasics(2010)](http://www.delphibasics.info/home/delphibasicscounterstrikewireleases/pe-inject)
 		* [PE-inject - Michal Strehovsky](https://migeel.sk/programming/pe-inject/)
 			* [Documentation](http://docs.migeel.sk/PE-inject/)
 		* [ReflectivePELoader](https://github.com/BenjaminSoelberg/ReflectivePELoader)
@@ -6707,19 +7027,75 @@
 			* Code that allows running another windows PE in the same address space as the host process.
 		* [loadlibrayy](https://github.com/vmcall/loadlibrayy)
 			* x64 PE injector with kernel handle elevation and thread hijacking capabilities
-		* Invoke-ReflectivePEInjection - PowerSploit https://github.com/PowerShellMafia/PowerSploit/blob/master/CodeExecution/Invoke-ReflectivePEInjection.ps1)
+		* [Invoke-ReflectivePEInjection - PowerSploit](https://github.com/PowerShellMafia/PowerSploit/blob/master/CodeExecution/Invoke-ReflectivePEInjection.ps1)
 			* [Documentation](https://powersploit.readthedocs.io/en/latest/CodeExecution/Invoke-ReflectivePEInjection/)
-		* Invoke-ReflectivePEInjection.ps1 - empire](https://github.com/BC-SECURITY/Empire/blob/master/data/module_source/management/Invoke-ReflectivePEInjection.ps1)
+		* [Invoke-ReflectivePEInjection.ps1 - empire](https://github.com/BC-SECURITY/Empire/blob/master/data/module_source/management/Invoke-ReflectivePEInjection.ps1)
+		* [darkarmour](https://github.com/bats3c/darkarmour)
 * **PowerLoader(Ex)**
 	* **101**
 		* [PowerLoader Injection – Something truly amazing - malwaretech(2013)](https://www.malwaretech.com/2013/08/powerloader-injection-something-truly.html)
 	* **PoC**
 		* [PowerLoaderEx](https://github.com/BreakingMalware/PowerLoaderEx)
 * **Print Spooler**
+	* **101**
+		* [Windows Process Injection: Print Spooler - odzhan(2019)](https://modexp.wordpress.com/2019/03/07/process-injection-print-spooler/)
+	* **Performing**
+	* **Detection**
+	* **PoC**
+		* [PoC](https://github.com/odzhan/injection/tree/master/spooler)	
 * **PROPagate**
+	* **101**
+		* [PROPagate – a new code injection trick - Hexacorn(2017)](http://www.hexacorn.com/blog/2017/10/26/propagate-a-new-code-injection-trick/)
+		* [Propagate – yet another follow-up (hypothetical clipboard execution version) - Hexacorn(2018)](https://www.hexacorn.com/blog/2018/11/19/propagate-yet-another-follow-up-hypothetical-clipboard-execution-version/)
+		* [PROPagate – a new code injection trick – 64-bit and 32-bit - Hexacorn(2017)](https://www.hexacorn.com/blog/2017/11/03/propagate-a-new-code-injection-trick-64-bit-and-32-bit/)
+		* [PROPagate follow-up #2 – Some more Shattering Attack Potentials - Hexacorn(2018)](https://www.hexacorn.com/blog/2018/02/04/propagate-follow-up-2-some-more-shattering-attack-potentials/)
+	* **Info**
+		* [Windows Process Injection: PROPagate - odzhan(2018)](https://modexp.wordpress.com/2018/08/23/process-injection-propagate/)	
+		* [RIG Exploit Kit Delivering Monero Miner Via PROPagate Injection Technique - Sudhanshu Dubey, Dileep Kumar Jallepalli(2018)](https://www.fireeye.com/blog/threat-research/2018/06/rig-ek-delivering-monero-miner-via-propagate-injection-technique.html)
+	* **Performing**
+	* **Detection**
+	* **PoC**
+		* [propagate](https://github.com/odzhan/injection/tree/master/propagate	)
+	* **CLIPBRDWNDCLASS**
+		* [Propagate – yet another follow-up (hypothetical clipboard execution version) - hexacorn](http://www.hexacorn.com/blog/2018/11/19/propagate-yet-another-follow-up-hypothetical-clipboard-execution-version/)
+		* [Windows Process Injection: CLIPBRDWNDCLASS - modexp(2019)](https://modexp.wordpress.com/2019/05/24/4066/)
+		* [PoC](https://github.com/odzhan/injection/tree/master/clipboard)
 * **Service Control Handler**
+	* **101**
+		* [Windows Process Injection: Service Control Handler - odzhan(2018)](https://modexp.wordpress.com/2018/08/30/windows-process-injection-control-handler/)
+	* **Info**
+	* **Performing**
+	* **Detection**
+	* **PoC**
+		* [svcctrl](https://github.com/odzhan/injection/tree/master/svcctrl)
 * **Shatter**
+	https://web.archive.org/web/20060904080018/http://security.tombom.co.uk/shatter.html - 2002
+	https://www.blackhat.com/presentations/bh-usa-04/bh-us-04-moore/bh-us-04-moore-whitepaper.pdf 2004
+	https://www.virusbulletin.com/virusbulletin/2012/10/code-injection-return-oriented-programming - 2012
+	https://modexp.wordpress.com/2019/04/25/seven-window-injection-methods/
+	https://modexp.wordpress.com/2020/07/07/wpi-wm-paste/
+	* **101**
+		* [Shattering By Example - Brett Moore(BHUSA2004)](https://www.blackhat.com/presentations/bh-usa-04/bh-us-04-moore/bh-us-04-moore-whitepaper.pdf)
+	* **List of**
+		* WordWarping
+			https://www.hexacorn.com/blog/2019/04/23/wordwarper-new-code-injection-trick/
+		* Hyphentension
+		* AutoCourgette
+		* Streamception
+		* Oleum
+		* ListPlanting
+		* Treepoline
 * **Shellcode Injection**
+	* **101**
+	* **Information**
+	* **Performing**
+		* [Process Injection - Part I - 3xpl01tc0d3r(2019)](https://3xpl01tc0d3r.blogspot.com/2019/08/process-injection-part-i.html)
+		* [AddressOfEntryPoint Code Injection without VirtualAllocEx RWX - @spottheplanet](https://www.ired.team/offensive-security/code-injection-process-injection/addressofentrypoint-code-injection-without-virtualallocex-rwx)
+		* [inmem_pe.c](https://github.com/TheWover/donut/blob/master/loader/inmem_pe.c)
+			* In-Memory execution of unmanaged DLL file. YMMV with EXE files requiring subsystem..
+	* **Fibers**
+		* [Code Execution via Fiber Local Storage - dronesec(2019)](http://dronesec.pw/blog/2019/08/12/code-execution-via-fiber-local-storage/)
+		* [Shellcode Execution through Fibers - @spotheplanet](https://www.ired.team/offensive-security/code-injection-process-injection/executing-shellcode-with-createfiber)
 * **Stack Bomber**
 	* **101**
 	* **Info**
@@ -6747,8 +7123,285 @@
 		* [cThreadHijack](https://github.com/connormcgarr/cThreadHijack)
 			* Beacon Object File (BOF) for remote process injection via thread hijacking
 * **ThreadLocal Storage Injection**
+	* **101**
+	* **Info**
+	* **Performing**
+	* **Detection**
+	* **PoC**
 * **Tooltips/Common Controls**
+	* **101**
+		* [Windows Process Injection: Tooltip or Common Controls - odzhan(2019)](https://modexp.wordpress.com/2019/08/10/windows-process-injection-tooltip-controls/)
+	* **Info**
+	* **Performing**
+	* **Detection**
+	* **PoC**
+		* [tooltip](https://github.com/odzhan/injection/tree/master/tooltip)
 * **Windows Notification Facility**
+	* **101**
+	* **Info**
+		* [Windows Process Injection : Windows Notification Facility - odzhan(2019)](https://modexp.wordpress.com/2019/06/15/4083/)
+	* **Performing**
+		* [Exploit WNF Callback - Emeric Nasi(2020)](https://dl.packetstormsecurity.net/papers/general/code_injection_series_part3.pdf)
+	* **Detection**
+	* **PoC**
+		* [wnf](https://github.com/odzhan/injection/tree/master/wnf)
 * **WinSock Helper Functions(WSHX)**
+	* **101**
+		* [Windows Process Injection: Winsock Helper Functions (WSHX) - odzhan(2019)](https://modexp.wordpress.com/2019/07/27/process-injection-winsock/)
+	* **Info**
+	* **Performing**
+	* **Detection**
+	* **PoC**
+		* [wsh](https://github.com/odzhan/injection/tree/master/wsh)
+* **Zombify** - herpaderping?
+	* [Zombie Processes as a HIPS Bypass - Malwaretech(2014)](https://www.malwaretech.com/2014/12/zombie-processes-as-hips-bypass.html)
+	* [ZombifyProcess](https://github.com/MalwareTech/ZombifyProcess)
+		* create a standard Windows process in a suspended state, write our malicious code to the processes’ memory; the PEB and the EPROCESS structures will still be that of the original process, causing the HIPS to see the now malicious process as a legitimate signed executable (this is not RunPE or dynamic forking, because we don’t unmap the original executable and replacing it with our malicious one, as thos can be detected in multiple ways).
+* **Tradecraft Tips**
+	* [Windows Process Injection: Sharing the payload - odzhan](https://modexp.wordpress.com/2018/07/15/process-injection-sharing-payload/)
+* **Unsorted**
+	* [New method of injection - w4kfu(2011)](http://blog.w4kfu.com/post/new_method_of_injection)
+		* "I disovered a new method of injection (I don't know if it is really new) in a malware dropped by duqu. So I want to share it with you and as usual write a p0c. Edit : This method is not new, apparently it have been using by game cheats for years, but instead of using ZwUnmapViewOfSection they use FreeLibrary."
+macOS
+	https://developer.apple.com/videos/play/wwdc2019/701/
+	https://github.com/Homebrew/brew/blob/bf7fe45e8998e56e6690347a0192c454b8cb203b/Library/Homebrew/cask/quarantine.rb
+	https://medium.com/tenable-techblog/attacking-unattended-installs-on-macos-dfc1f57984e0
+	https://github.com/KhaosT/SimpleVM
+	https://m1racles.com/
+	* [Disclosure: Another macOS privacy protections bypass - Jeff Johnson(2020)](https://lapcatsoftware.com/articles/disclosure2.html)
+	https://objective-see.com/blog/blog_0x64.html
+	https://github.com/create-dmg/create-dmg
+	https://www.cdfinder.de/guide/blog/apple_hell.html
+	https://github.com/0xmachos/CVE-2019-8561
+	https://www.youtube.com/watch?v=5nOxznrOK48
+	https://conference.hitb.org/hitbsecconf2021ams/materials/D1T1%20-%20MacOS%20Local%20Security%20-%20Escaping%20the%20Sandbox%20and%20Bypassing%20TCC%20-%20Thijs%20Alkemade%20&%20Daan%20Keuper.pdf
+	https://posts.specterops.io/introducing-mystikal-4fbd2f7ae520
+	https://github.com/D00MFist/Mystikal
+	https://www.kaspersky.com/blog/is-txt-file-safe/39256/
+	https://www.youtube.com/watch?v=Xvg3Ve8a_BM
+	https://developer.apple.com/documentation/virtualization
+	https://objective-see.com/blog/blog_0x5F.html
+	https://github.com/wangtielei/Slides
+	https://github.com/antman1p/JXA_Proc_Tree
+	https://github.com/cedowens/Add-To-TCC-DB
+	https://github.com/antman1p/PrintTCCdb
+	https://wojciechregula.blog/post/learn-xpc-exploitation-part-1-broken-cryptography/
+	https://wojciechregula.blog/post/learn-xpc-exploitation-part-2-say-no-to-the-pid/
+	https://wojciechregula.blog/post/learn-xpc-exploitation-part-3-code-injections/
+	https://fliphtml5.com/mnts/yttd/basic
+	https://objective-see.com/blog/blog_0x64.html
+	https://research.nccgroup.com/2020/05/28/exploring-macos-calendar-alerts-part-2-exfiltrating-data-cve-2020-3882/
+	https://wojciechregula.blog/post/when-vulnerable-library-is-actually-your-physical-book/
+	https://blog.chichou.me/2021/01/16/see-no-eval-runtime-code-execution-objc/
+	https://github.com/kendfinger/MacHack#profiles
+	https://securityboulevard.com/2021/04/making-macos-universal-apps-in-swift-with-universal-golang-static-libraries/
+	https://holdmybeersecurity.com/2020/01/03/poc-mail-app-the-boomerang-of-reverse-shells-on-macos/
+	https://labs.f-secure.com/blog/jamfing-for-joy-attacking-macos-in-enterprise
+	https://www.trendmicro.com/en_us/research/20/h/xcsset-mac-malware--infects-xcode-projects--uses-0-days.html
+	https://theevilbit.github.io/beyond/beyond_0001/
+	https://theevilbit.github.io/beyond/beyond_0002/
+	https://theevilbit.github.io/beyond/beyond_0003/
+	https://github.com/hrbrmstr/extractor
+	https://github.com/create-dmg/create-dmg
+	https://developer.apple.com/documentation/hypervisor
+	https://github.com/cedowens/JXA-RemoveQuarantine
+	https://lapcatsoftware.com/articles/sandbox-escape.html
+	https://www.mdsec.co.uk/2021/01/macos-post-exploitation-shenanigans-with-vscode-extensions/
+Slides
+	https://themittenmac.com/publication_docs/OBTS_v1_Bradley.pdf
+	https://www.slideshare.net/CodyThomas6/bashing-brittle-indicators-red-teaming-macos-without-bash-or-python
+	https://www.slideshare.net/CodyThomas6/ready-player-2-multiplayer-red-teaming-against-macos
+	https://www.slideshare.net/CodyThomas6/walking-the-bifrost-an-operators-guide-to-heimdal-kerberos-on-macos
+Talks
+	https://www.youtube.com/watch?v=5nOxznrOK48&list=PLliknDIoYszvTDaWyTh6SYiTccmwOsws8&index=5
+		https://themittenmac.com/publication_docs/OBTS_v2_Bradley.pdf
+	https://github.com/opensource-apple/dyld/tree/master/unit-tests/test-cases/bundle-memory-load
+	https://papers.put.as/
+	https://github.com/xorrior/macOSTools
+	https://lockboxx.blogspot.com/2020/06/macos-post-summary.html
+	https://github.com/LinusHenze/Unrootless-Kext
+	https://theevilbit.github.io/posts/vmware_fusion_11_guest_vm_rce_cve-2019-5514/
+	https://blog.confiant.com/new-macos-bundlore-loader-analysis-ca16d19c058c
+	https://www.mdsec.co.uk/2019/12/macos-filename-homoglyphs-revisited/
+	https://www.fireeye.com/blog/threat-research/2019/04/triton-actor-ttp-profile-custom-attack-tools-detections.html
+		* https://twitter.com/Agarri_FR/status/1130736756431761408
+		* CVE-2019-5514 is a cool RCE in VMware Fusion 11, abusing an unauthenticated REST endpoint running on localhost
+	https://objective-see.com/blog/blog_0x56.html
+	* [Offensive MacOS](https://github.com/its-a-feature/offensive_macos)
+		* This is a collection of macOS specific tooling, blogs, and other related information for offensive macOS assessments
+	Stuff
+		* [XcodeGhost - Wikipedia](https://en.wikipedia.org/wiki/XcodeGhost)
+		* [XCSSET Mac Malware: Infects Xcode Projects, Performs UXSS Attack on Safari, Other Browsers, Leverages Zero-day Exploits - Trend Micro(2020)](https://blog.trendmicro.com/trendlabs-security-intelligence/xcsset-mac-malware-infects-xcode-projects-performs-uxss-attack-on-safari-other-browsers-leverages-zero-day-exploits/)
+	3rd Party
+		DruvaSync
+			https://medium.com/tenable-techblog/getting-root-on-macos-via-3rd-party-backup-software-b804085f0c9
+	APFS
+		https://www.irongeek.com/i.php?page=videos/bsidescharm2018/track-2-01-getting-saucy-with-apfs-the-state-of-apples-new-file-system-sarah-edwards
+	Carbon
+	Cred Attacks
+		https://gist.github.com/teddziuba/3ff08bdda120d1f7822f3baf52e606c2
+		* **Articles**
+			https://www.sprocketsecurity.com/blog/how-to-hijack-slack-sessions-on-macos
+		* **Tools**
+	Code Injection
+		https://www.trustedsec.com/blog/macos-injection-via-third-party-frameworks/
+		https://blog.xpnsec.com/macos-injection-via-third-party-frameworks/
+		https://knight.sc/malware/2019/03/15/code-injection-on-macos.html
+		https://www.youtube.com/watch?v=1LSvGZCoAVc&list=PLLvAhAn5sGfiZKg9GTUzljNmuRupA8igX&index=6
+		* [insert_dylib](https://github.com/Tyilo/insert_dylib)
+			* Command line utility for inserting a dylib load command into a Mach-O binary
+	Collection
+		* **Articles/Blogposts/Writeups**
+		* **Tools**
+	Defense Evasion
+		* []()
+		* [Exploiting XPC in AntiVirus - Csaba Fitz(NullCon2021)](https://www.slideshare.net/CsabaFitzl/exploiting-xpc-in-antivirus)
+			* In this talk we will publish our research we conducted on 28 different AntiVirus products on macOS through 2020. Our focus was to assess the XPC services these products expose and if they presented any security vulnerabilities. We will talk about the typical issues, and demonstrate plenty of vulnerabilities, which typically led to full control of the given product or local privilege escalation on the system. At the end we will give advice to developers how to write secure XPC services.
+		* [Mojave’s security “hardening” | User protections could be bypassed - Phil Stokes(2018)]
+			* Apple Events are blocked depending on origination, could be bypassed using SSH.
+	Disco
+		* **Articles/Blogposts/Writeups**
+		* [Always Watching: macOS Eavesdropping – Justin Bui (SO-CON 2020)](https://www.youtube.com/watch?v=hAiKh2o2_Zs&list=PLJK0fZNGiFU-2vFpjnt96j_VSuQVTkAnO&index=6)
+			* As macOS becomes more prevalent in modern enterprise environments, red teamers have had to adapt their tradecraft. Input monitoring and screenshots can provide a wealth of information for attacker on any operating system. In this talk, we’ll discuss macOS internals and dive into the various API calls necessary for keylogging, clipboard monitoring, and screenshots. The accompanying source code will be released to GitHub!
+		* **Tools**
+	DMG
+		http://newosxbook.com/DMG.html
+	DylibHijack
+		https://www.virusbulletin.com/virusbulletin/2015/03/dylib-hijacking-os-x
+		https://malwareunicorn.org/workshops/macos_dylib_injection.html#0
+		* [Dylib-Hijack-Scanner](https://github.com/D00MFist/Dylib-Hijack-Scanner)
+			* JavaScript for Automation (JXA) version of Patrick Wardle's tool that searches applications for dylib hijacking opportunities
+	DYLD
+		http://newosxbook.com/articles/DYLD.html
+	Entitlements
+		https://secret.club/2020/08/14/macos-entitlements.html
+	Evasion
+		* **Articles/Blogposts/Writeups**
+		* **Tools**
+	Execution
+		https://github.com/CylanceVulnResearch/osx_runbin
+		https://github.com/cedowens/JXA-Runner
+		* **101**
+		* **Articles/Blogposts/Writeups**
+			https://antman1p-30185.medium.com/macos-native-api-calls-in-electron-d297d9a960af
+		* **Talks/Presentations/Videos**
+		* **Tools**
+		* **Bring-Your-Own-`*`**
+			https://blog.xpnsec.com/bring-your-own-vm-mac-edition/
+	Gatekeeper
+		https://bouj33boy.com/gatekeeper-symlink-automount-bypass/
+	Hooking
+		* [subhook](https://github.com/Zeex/subhook)
+			* SubHook is a super-simple hooking library for C and C++ that works on Windows, Linux and macOS. It supports x86 only (32-bit and 64-bit).
+		* [Function Hooking for Mac OSX and Linux - ](https://media.defcon.org/DEF%20CON%2018/DEF%20CON%2018%20video%20and%20slides/DEF%20CON%2018%20Hacking%20Conference%20Presentation%20By%20Joe%20Damato%20-%20Function%20Hooking%20for%20Mac%20OSX%20and%20Linux%20-%20Video%20and%20Slides.m4v)
+			* [Slides](https://www.defcon.org/images/defcon-18/dc-18-presentations/Damato/DEFCON-18-Damato-Function-Hooking.pdf)
+	Injection
+		https://en.wikipedia.org/wiki/Rpath
+		https://github.com/djhohnstein/macos_shell_memory
+		* [InjectCheck](https://github.com/D00MFist/InjectCheck)
+			* The tool enumerates the Hardened Runtime, Entitlements, and presence of Electron files to determine possible injection opportunities
+	JAMF
+		* [An Attacker's Perpsective on JAMF Configurations - Luke Roberts, Calum Hall(ObjectiveByTheSeav3)](https://objectivebythesea.com/v3/talks/OBTS_v3_cHall_lRoberts.pdf)
+		* [Jamfing for Joy: Attacking macOS in Enterprise - Calum Hall, Luke Roberts(2020)](https://labs.f-secure.com/blog/jamfing-for-joy-attacking-macos-in-enterprise/)
+	JXA
+		https://posts.specterops.io/persistent-jxa-66e1c3cd1cf5
+		* [PersistentJXA](https://github.com/D00MFist/PersistentJXA)
+			* Collection of macOS persistence methods and miscellaneous tools in JXA
+		https://news.ycombinator.com/item?id=21803874
+		https://forum.keyboardmaestro.com/t/jxa-javascript-for-automation-from-the-start/4522
+		https://stackoverflow.com/questions/47940322/cant-find-jxa-documentation
+		https://medium.com/@SteveBarbera/automating-chrome-with-jxa-javascript-application-scripting-6f9bc433216a
+		https://pragli.com/blog/manage-macos-windows-with-jxa/
+		https://computers.tutsplus.com/tutorials/a-beginners-guide-to-javascript-application-scripting-jxa--cms-27171
+		https://wiki.nikitavoloboev.xyz/macos/jxa
+		https://github.com/JXA-Cookbook/JXA-Cookbook
+	LoLbins
+		https://labs.sentinelone.com/20-common-tools-techniques-used-by-macos-threat-actors-malware/
+	Mach-O
+		* [So You Want To Be A Mach-O Man? - symbolcrash(2019)](https://www.symbolcrash.com/2019/02/25/so-you-want-to-be-a-mach-o-man/)
+		* [Mach-O Universal / Fat Binaries - symbolcrash(2019)](https://www.symbolcrash.com/2019/02/26/mach-o-universal-fat-binaries/)
+	Malware
+		https://objective-see.com/blog/blog_0x4E.html
+		https://objective-see.com/blog/blog_0x4D.html
+		https://www.irongeek.com/i.php?page=videos/derbycon6/104-macs-get-sick-too-tyler-halfpop-jacob-soo
+		https://www.sentinelone.com/blog/2020/01/29/scripting-macs-with-malice-how-shlayer-and-other-malware-installers-infect-macos/
+		https://labs.sentinelone.com/apt32-multi-stage-macos-trojan-innovates-on-crimeware-scripting-technique/
+		https://objective-see.com/blog/blog_0x5C.html
+	Objective-C
+	Payloads
+		https://posts.specterops.io/sparkling-payloads-a2bd017095c
+		https://posts.specterops.io/sparkling-payloads-a2bd017095c
+	Persistence
+		https://topic.alibabacloud.com/a/how-to-implement-persistent-access-on-macos-through-emond_3_75_32777033.html
+		https://posts.specterops.io/are-you-docking-kidding-me-9aa79c24bdc1
+		https://posts.specterops.io/saving-your-access-d562bf5bf90b
+		https://posts.specterops.io/leveraging-emond-on-macos-for-persistence-a040a2785124
+		https://theevilbit.github.io/posts/macos_persistence_spotlight_importers/
+		https://theevilbit.github.io/posts/macos_persisting_through-application_script_files/
+		https://github.com/cedowens/Persistent-Swift
+		* [Persistent JXA - Leo Pitt(2020)](https://posts.specterops.io/persistent-jxa-66e1c3cd1cf5)
+		* [Operationalising Calendar Alerts: Persistence on macOS - Luke Roberts(2020)](https://labs.f-secure.com/blog/operationalising-calendar-alerts-persistence-on-macos/)
+			* Throughout the following blog post we provide insights into calendar alerts, a method of persisting on macOS. Building on the work of Andy Grant over at NCC (https://research.nccgroup.com/2020/05/05/exploring-macos-calendar-alerts-part-1-attempting-to-execute-code/), this post takes deeper look into weaponising the feature for use in offensive operations. This includes reversing Automator.app to find an undocumented API that enables the technique.
+		* [Hey, I'm Still In Here: An Overview of macOS Persistence Techniques – Leo Pitt (SO-CON 2020)](https://www.youtube.com/watch?v=OFQYTJiAmxs&list=PLJK0fZNGiFU-2vFpjnt96j_VSuQVTkAnO&index=9)
+			* There is more to macOS persistence than Launch Agents. This talk goes over some lesser utilized macOS persistence methods. We will walk through how these methods work, how automation can be leveraged to quickly execute these from an offensive perspective, and how defenders can leverage indicators of these methods to assist in detection efforts.
+		* Finder plugins
+			https://github.com/D00MFist/InSync
+		* **Tools**
+			* [CalendarPersist](https://github.com/FSecureLABS/CalendarPersist)
+				* JXA script to allow programmatic persistence via macOS Calendar.app alerts. 
+	plist
+	Pkgs
+		Unpacking Pkgs: A Look Inside Macos Installer Packages And Common Security Flaws - Andy Grant
+	PkgInfo
+	PopUps
+		https://github.com/its-a-feature/macos-popups
+	PostEx
+		https://www.irongeek.com/i.php?page=videos/nolacon2018/nolacon-2018-107-your-mac-defenestrated-post-osxploitation-elevated-fuzzynop-noncetonic
+		* [macos_execute_from_memory](https://github.com/its-a-feature/macos_execute_from_memory)
+	Privileged Helper Tools
+		https://www.offensivecon.org/speakers/2019/tyler-bohan.html
+		https://github.com/blankwall/Offensive-Con
+		https://theevilbit.github.io/posts/secure_coding_privilegedhelpertools_part1/
+		https://theevilbit.github.io/posts/secure_coding_privilegedhelpertools_part2/
+	PrivEsc
+		https://xlab.tencent.com/en/2021/01/11/cve-2020-9971-abusing-xpc-service-to-elevate-privilege/
+		https://www.rapid7.com/db/vulnerabilities/apple-osx-systempreferences-cve-2020-9839
+		https://packetstormsecurity.com/files/159084/macOS-cfprefsd-Arbitrary-File-Write-Local-Privilege-Escalation.html
+		https://book.hacktricks.xyz/linux-unix/privilege-escalation
+		https://bradleyjkemp.dev/post/launchdaemon-hijacking/
+		https://research.nccgroup.com/2021/06/04/ios-user-enrollment-and-trusted-certificates/
+		https://medium.com/@mattshockl/cve-2020-9934-bypassing-the-os-x-transparency-consent-and-control-tcc-framework-for-4e14806f1de8
+		https://www.offensive-security.com/offsec/macos-preferences-priv-escalation/
+		https://themittenmac.com/publication_docs/OBTS_v2_Bradley.pdf
+		* [Unauthd - Logic bugs FTW - A2nkF(2020)](https://a2nkf.github.io/unauthd_Logic_bugs_FTW/)
+		* [Privilege Escalation | macOS Malware & The Path to Root Part 2 - Phil Stokes(2019)](https://www.sentinelone.com/blog/privilege-escalation-macos-malware-the-path-to-root-part-2/)
+		https://www.criticalstart.com/local-privilege-escalation-vulnerability-discovered-in-vmware-fusion/
+	TCC
+		https://blog.fleetsmith.com/tcc-a-quick-primer/
+		https://lapcatsoftware.com/articles/disclosure3.html
+		https://eclecticlight.co/2018/10/10/watching-mojaves-privacy-protection-at-work/
+		https://eclecticlight.co/2020/11/25/macos-has-checked-app-signatures-online-for-over-2-years/
+		https://developer.apple.com/documentation/uikit/protecting_the_user_s_privacy
+		https://www.macobserver.com/link/about-macos-transparency-consent-and-control-system/
+		https://www.theregister.com/2020/07/01/apple_macos_privacy_bypass/
+		https://lockboxx.blogspot.com/2019/04/macos-red-teaming-205-tcc-transparency.html
+		https://blog.xpnsec.com/bypassing-macos-privacy-controls/
+		https://medium.com/@mattshockl/cve-2020-9934-bypassing-the-os-x-transparency-consent-and-control-tcc-framework-for-4e14806f1de8
+		https://eclecticlight.co/2019/07/22/mojaves-privacy-consent-works-behind-your-back/
+		https://lapcatsoftware.com/articles/disclosure2.html
+		https://mjtsai.com/blog/tag/transparency-consent-and-control-tcc/
+		https://fpf.org/2020/07/06/ios-privacy-advances/
+		https://developer.apple.com/documentation/devicemanagement/privacypreferencespolicycontrol
+		https://www.jamf.com/jamf-nation/articles/553/preparing-your-organization-for-user-data-protections-on-macos-10-14
+		https://eclecticlight.co/2018/10/10/watching-mojaves-privacy-protection-at-work/
+		https://medium.com/@mattshockl/cve-2020-9934-bypassing-the-os-x-transparency-consent-and-control-tcc-framework-for-4e14806f1de8
+		https://medium.com/@mattshockl/cve-2020-9934-bypassing-the-os-x-transparency-consent-and-control-tcc-framework-for-4e14806f1de8
+	URL Schemes
+		* [Custom_URL_Scheme](https://github.com/D00MFist/Custom_URL_Scheme)
+	Workflows
+		https://support.apple.com/guide/automator/use-quick-action-workflows-aut73234890a/mac
+	XPC
+		https://www.youtube.com/watch?v=KPzhTqwf0bA&list=PLYvhPWR_XYJmwgLkZbjoEOnf2I1zkylz8&index=7
+
 
 
